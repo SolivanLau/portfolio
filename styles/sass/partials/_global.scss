@@ -1,0 +1,25 @@
+@use './variables' as *;
+
+html {
+    // 1 rem =  20px standard!
+    font-size: 125%;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+.wrapper {
+    max-width: 1440px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+h1,
+p,
+input,
+label {
+    font-family: $titleFont;
+}
