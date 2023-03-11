@@ -1,0 +1,48 @@
+@use './variables' as *;
+
+// INPUTS AND LABELS
+
+.inputContainer {
+    // label placeholder - input relationship
+    display: inline-block;
+    position: relative;
+
+    // flex format: input to bottom
+    display: flex;
+    align-items: flex-end;
+    // temp dimensions
+    width: 250px;
+    height: 60px;
+
+    // temp stlying
+    border-radius: 8px;
+    padding: 10px;
+    // temp colors
+    background-color: rgb(164, 170, 179);
+}
+
+.inputChild {
+    width: 100%;
+    background-color: rgb(74, 144, 248);
+    border-radius: 8px;
+
+    &.msg {
+        height: 27px;
+    }
+
+}
+
+.labelPlaceholder {
+    // linked to parent
+    position: absolute;
+    //current position
+    left: 12px;
+    top: 26px;
+    // animation
+    transition: 0.2s ease;
+}
+
+.labelToTop {
+    top: 5px;
+    font-size: .75rem;
+}

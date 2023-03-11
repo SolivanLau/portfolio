@@ -23,3 +23,17 @@ input,
 label {
     font-family: $titleFont;
 }
+
+// stripping styles
+input,
+textarea {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    resize: none;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
