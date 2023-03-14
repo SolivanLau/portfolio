@@ -1,5 +1,27 @@
 @use './variables' as *;
 
+.contact {
+    background-color: peachpuff;
+
+    .wrapper {
+        // flex format: article and form
+        display: flex;
+    }
+
+}
+
+.contactInfo {
+    width: 30%;
+}
+
+.socialList {
+    display: flex;
+}
+
+.contactForm {
+    width: 70%;
+}
+
 // INPUTS AND LABELS
 
 .inputContainer {

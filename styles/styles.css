@@ -228,11 +228,13 @@ html {
 
 html {
   font-size: 125%;
+  font-family: "Work Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
-img {
-  display: block;
-  width: 100%;
+body {
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 
 .wrapper {
@@ -241,11 +243,10 @@ img {
   margin: 0 auto;
 }
 
-h1,
-p,
-input,
-label {
-  font-family: "Work Sans", sans-serif;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 input,
@@ -259,6 +260,239 @@ textarea {
   height: 100%;
   width: 100%;
   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  padding: 10px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.socialContainer {
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+section {
+  min-height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.navBtn:hover {
+  background-color: rgba(94, 95, 179, 0.454);
+}
+.navBtn:hover .arrowContainer {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.arrowContainer {
+  width: 50px;
+  aspect-ratio: 1/1;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.darkTheme {
+  background-color: black;
+}
+
+.lightTheme {
+  background-color: orange;
+}
+
+header {
+  background-color: #F4F1DE;
+}
+
+.subText {
+  display: block;
+}
+
+.themeToggle {
+  width: 75px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 25px;
+  background-color: rgb(187, 187, 187);
+}
+.themeToggle:hover {
+  cursor: pointer;
+}
+
+.toggleIcon {
+  background-color: grey;
+  border-radius: 50%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  position: relative;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+.toggleIcon svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.toggleIcon.dark {
+  -webkit-transform: translateX(35px);
+          transform: translateX(35px);
+}
+.toggleIcon.dark .darkIcon {
+  opacity: 1;
+  fill: rgb(79, 72, 208);
+}
+.toggleIcon.light .lightIcon {
+  opacity: 1;
+  fill: orange;
+}
+
+.about {
+  background-color: #3D405B;
+}
+
+.techStack {
+  margin-top: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.techContainer {
+  width: 23%;
+  min-width: 200px;
+  height: 260px;
+  position: relative;
+}
+.techContainer:hover .techIcon, .techContainer:focus .techIcon {
+  top: 0px;
+}
+.techContainer:hover .techInfo, .techContainer:focus .techInfo {
+  bottom: 0px;
+  opacity: 1;
+}
+
+.techIcon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin: 0 auto;
+  width: 100px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 10;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.techIcon h3 {
+  text-align: center;
+}
+
+.techInfo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  margin: 0 auto;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: rgb(166, 166, 250);
+  opacity: 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.projects {
+  background-color: #81B29A;
+}
+
+.contact {
+  background-color: peachpuff;
+}
+.contact .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contactInfo {
+  width: 30%;
+}
+
+.socialList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contactForm {
+  width: 70%;
 }
 
 .inputContainer {

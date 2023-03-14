@@ -1,0 +1,73 @@
+@use './variables' as *;
+
+
+.techStack {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+
+}
+
+.techContainer {
+    width: 23%;
+    min-width: 200px;
+    height: 260px;
+    position: relative;
+
+    &:hover,
+    &:focus {
+        .techIcon {
+            top: 0px;
+        }
+
+        .techInfo {
+            bottom: 0px;
+            opacity: 1;
+
+        }
+    }
+}
+
+.techIcon {
+    // linking to techContainer
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    margin: 0 auto;
+
+    //dimensions
+    width: 100px;
+    height: fit-content;
+    z-index: 10;
+
+    h3 {
+        text-align: center;
+    }
+
+    // animations
+    transition: 0.2s ease;
+}
+
+.techInfo {
+    // linking to techContainer
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin: 0 auto;
+
+    //dimensions
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgb(166, 166, 250);
+    opacity: 0;
+    // animation
+    transition: 0.2s ease;
+}

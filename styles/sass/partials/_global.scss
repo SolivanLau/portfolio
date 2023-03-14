@@ -3,13 +3,14 @@
 html {
     // 1 rem =  20px standard!
     font-size: 125%;
+    font-family: $titleFont;
+    // scroll animation
+    scroll-behavior: smooth;
 }
 
-img {
-    display: block;
-    width: 100%;
+body {
+    transition: 500ms;
 }
-
 
 .wrapper {
     max-width: 1440px;
@@ -17,14 +18,12 @@ img {
     margin: 0 auto;
 }
 
-h1,
-p,
-input,
-label {
-    font-family: $titleFont;
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-// stripping styles
 input,
 textarea {
     outline: none;
@@ -36,4 +35,81 @@ textarea {
     height: 100%;
     width: 100%;
     padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    padding: 10px;
+}
+
+// IMG/SVG CONTAINERS
+img {
+    display: block;
+    width: 100%;
+}
+
+.socialContainer {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+header,
+section {
+    min-height: 100vh;
+    // links dynamic nav arrow to end of each section
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+
+    transition: 0.2s ease;
+
+    &:hover {
+        background-color: rgba(94, 95, 179, 0.454);
+
+        .arrowContainer {
+            transform: scale(1.4);
+        }
+    }
+}
+
+.arrowContainer {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    transition: 0.2s ease;
+}
+
+.darkTheme {
+    background-color: black;
+}
+
+.lightTheme {
+    background-color: orange;
 }

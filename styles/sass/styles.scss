@@ -2,5 +2,11 @@
 @use './partials/variables' as *;
 @use './partials/global';
 // @use './partials/underConstruction';
-// @use './partials/testing';
+
+// by section
+@use './partials/header';
+@use './partials/about';
+@use './partials/skills';
+@use './partials/projects';
+
 @use './partials/contact';
