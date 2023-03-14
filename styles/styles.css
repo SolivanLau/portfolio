@@ -342,16 +342,11 @@ section {
   transition: 0.2s ease;
 }
 
-.darkTheme {
-  background-color: black;
+.themeLight header {
+  background-color: #CFD8DC;
 }
-
-.lightTheme {
-  background-color: orange;
-}
-
-header {
-  background-color: #F4F1DE;
+.themeDark header {
+  background-color: #222222;
 }
 
 .subText {

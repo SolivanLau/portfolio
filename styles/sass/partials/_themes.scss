@@ -1,0 +1,35 @@
+@use './variables' as *;
+// themes: using same variable names that change value based on theme type (class of themeDark/themeLight on root element)
+$themes: (
+    Light: (bgColor: #CFD8DC, primeTextColor: rgb(149, 149, 240), secTextColor: red, activeTextColor:green, ),
+    Dark:(bgColor: #222222, primeTextColor: rgb(73, 73, 226), secTextColor: red, activeTextColor:green, )
+);
+
+
+
+
+@mixin themed() {
+
+    @each $theme,
+    $map in $themes {
+
+        // using keyword theme+ThemeName as class selector
+        .theme#{$theme} & {
+            $theme-map: () !global;
+
+            //create theme map, each key 
+            @each $key,
+            $submap in $map {
+                $value: map-get(map-get($themes, $theme), '#{$key}');
+                $theme-map: map-merge($theme-map, ($key: $value)) !global;
+            }
+
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+
+@function t($key) {
+    @return map-get($theme-map, $key);
+}

@@ -1,7 +1,11 @@
 @use './variables' as *;
+@use './themes' as *;
+
 
 header {
-    background-color: $test1;
+    @include themed() {
+        background-color: t(bgColor);
+    }
 }
 
 .subText {

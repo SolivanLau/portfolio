@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use './themes' as *;
 
 html {
     // 1 rem =  20px standard!
@@ -104,12 +105,4 @@ section {
     width: 50px;
     aspect-ratio: 1 / 1;
     transition: 0.2s ease;
-}
-
-.darkTheme {
-    background-color: black;
-}
-
-.lightTheme {
-    background-color: orange;
 }
