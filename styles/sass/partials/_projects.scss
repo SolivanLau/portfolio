@@ -1,5 +1,84 @@
 @use './variables' as *;
 
-.projects {
-    background-color: $test4;
+
+
+// PROJECT CARD
+
+.projectCard {
+    // flex: article and figure
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    // dimensions
+    width: 100%;
+    min-height: 450px;
+    padding: 25px;
+    // card styles
+    margin: 50px 0;
+    border-radius: 10px;
+
+    // static text color
+    @include themed() {
+        color: t(darkTextColor);
+    }
+
+    &:hover {
+
+        .projectImgContainer img {
+            transform: scale(1.2) rotate(0deg) translate(-45px, -30px);
+        }
+    }
+}
+
+// article section
+.projectAbout {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.projectStack,
+.projectLinks {
+    display: flex;
+    margin: 10px 0;
+}
+
+.projectStackItem,
+.projectLinkItem {
+    margin: 0 10px 0 0;
+}
+
+.projectFeatureList {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.featureItem {
+    margin: 10px;
+}
+
+// img
+.projectImgContainer {
+    display: flex;
+    align-items: center;
+    width: 40%;
+
+    img {
+        border-radius: 10px;
+        object-fit: contain;
+        transform: scale(1.1) rotate(6.4deg);
+        transition: 0.2s ease;
+    }
+
+
+}
+
+// project specific colors
+.delicious {
+    background-color: rgb(194, 250, 194);
+}
+
+.randomQuiz {
+    background-color: rgb(200, 183, 243);
 }

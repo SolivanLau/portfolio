@@ -3,10 +3,47 @@
 
 
 header {
-    @include themed() {
-        background-color: t(bgColor);
+    .wrapper {
+        // height: 100%;
+        display: flex;
+        flex-direction: column;
+
     }
 }
+
+
+.navBar {
+
+    width: 100%;
+    height: 40px;
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    .brandLogo {
+        width: 40px;
+        aspect-ratio: 1/1;
+    }
+}
+
+.linkContainer {
+    display: flex;
+    gap: 20px;
+
+    // justify-content: space-between;
+    width: 60%;
+}
+
+.linkList {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+
+    align-items: center;
+}
+
 
 .subText {
     display: block;
@@ -18,7 +55,7 @@ header {
     height: 40px;
     padding: 5px;
     border-radius: 25px;
-    background-color: rgb(187, 187, 187);
+    background-color: #BBBBBB;
 
     &:hover {
         cursor: pointer;
@@ -52,7 +89,7 @@ header {
 
         .darkIcon {
             opacity: 1;
-            fill: rgb(79, 72, 208);
+            fill: $brandGreen;
         }
     }
 
@@ -65,3 +102,65 @@ header {
     }
 
 }
+
+// hero  section
+.heroSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.brandBanner {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.brandLink {
+    height: 100%;
+    aspect-ratio: 1/1;
+
+
+}
+
+.brandLogo {
+    width: 100px;
+    aspect-ratio: 1/1;
+    background-color: $brandGreen;
+    border-radius: 8px;
+
+    .mini {
+        height: 40px;
+        aspect-ratio: 1/1;
+    }
+}
+
+.brandText {
+    h1 {
+        font-size: $headingFontSize;
+    }
+
+    .subText {
+        font-size: $subHeadingFontSize;
+    }
+
+}
+
+.avatarContainer {
+    background-image: url('../assets/icons/bgBlob.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 400px;
+
+    svg {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+// avatar animations

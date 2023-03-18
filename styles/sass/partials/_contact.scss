@@ -1,29 +1,70 @@
 @use './variables' as *;
+@use './themes' as *;
 
-.contact {
-    background-color: peachpuff;
+// GENERAL SECTION FORMAT
+section.contact {
+    background: $accentGreen;
 
     .wrapper {
-        // flex format: article and form
         display: flex;
+        justify-content: space-between;
+        gap: 30px;
     }
-
 }
 
+// CONTACT TEXT
 .contactInfo {
     width: 30%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
 }
 
 .socialList {
     display: flex;
+    margin: 20px 0;
+    gap: 20px
 }
 
+.socialContainer {
+    fill: $darkBlue;
+
+    transition: 0.2s ease;
+
+    &:hover {
+        fill: $brandGreen;
+        scale: 1.15;
+        rotate: -5deg;
+        animation: levitate 0.8s alternate infinite ease-in-out;
+    }
+}
+
+
+// CONTACT FORM
 .contactForm {
-    width: 70%;
+    width: 50%;
+    height: 100%;
+    min-height: fit-content;
+    border-radius: 8px;
+
+    @include themed() {
+        background-color: t(bgColor);
+    }
+
+    padding: 0px 15px;
+
+    display: flex;
+    flex-direction: column;
 }
 
-// INPUTS AND LABELS
+.userInfoContainer {
+    display: flex;
+    padding: 20px 0 10px;
 
+}
+
+// INPUTS/LABELS
 .inputContainer {
     // label placeholder - input relationship
     display: inline-block;
@@ -33,24 +74,38 @@
     display: flex;
     align-items: flex-end;
     // temp dimensions
-    width: 250px;
+    width: 100%;
     height: 60px;
 
     // temp stlying
     border-radius: 8px;
     padding: 10px;
-    // temp colors
-    background-color: rgb(164, 170, 179);
+    // background-color: $white;
+
+    &.msg {
+        padding-top: 24px;
+        min-height: 150px;
+        flex-grow: 1;
+    }
 }
 
 .inputChild {
     width: 100%;
-    background-color: rgb(74, 144, 248);
-    border-radius: 8px;
 
-    &.msg {
-        height: 27px;
+    @include themed() {
+        background-color: t(bgColor);
     }
+
+    border-bottom: 2px solid $brandGreen;
+
+    @include themed() {
+        color: t(primeTextColor);
+    }
+
+    // &.msg {
+    //     min-height: 150px;
+    //     flex-grow: 1;
+    // }
 
 }
 
@@ -62,6 +117,31 @@
     top: 26px;
     // animation
     transition: 0.2s ease;
+    color: $accentGreen;
+}
+
+// SUBMIT BUTTON
+.contactSubmit {
+    margin: 20px 10px 40px;
+    border-radius: 10px;
+    border: 2px solid $brandGreen;
+    color: $brandGreen;
+
+    @include themed() {
+        background-color: t(bgColor);
+    }
+
+    transition: 0.5s ease;
+
+    &:hover {
+        cursor: pointer;
+
+        @include themed() {
+            color: t(primeTextColor);
+            border: 2px solid t(primeTextColor);
+        }
+
+    }
 }
 
 .labelToTop {

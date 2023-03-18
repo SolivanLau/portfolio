@@ -7,17 +7,17 @@ html {
     font-family: $titleFont;
     // scroll animation
     scroll-behavior: smooth;
+
+    @include themed() {
+        color: t(primeTextColor);
+    }
 }
 
 body {
     transition: 500ms;
 }
 
-.wrapper {
-    max-width: 1440px;
-    width: 85%;
-    margin: 0 auto;
-}
+// STRIP STYLES
 
 ul {
     list-style: none;
@@ -44,9 +44,14 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+a {
     margin: 0;
     padding: 0;
+
+    @include themed() {
+        color: t(primeTextColor);
+    }
 }
 
 a {
@@ -56,6 +61,12 @@ a {
 button {
     border: none;
     padding: 10px;
+}
+
+.wrapper {
+    max-width: 1440px;
+    width: 85%;
+    margin: 0 auto;
 }
 
 // IMG/SVG CONTAINERS
@@ -74,29 +85,80 @@ figure {
     padding: 0;
 }
 
+// NAVIGATION SECTION STYLES
 header,
 section {
-    min-height: 100vh;
+    @include themed() {
+        background-color: t(bgColor);
+    }
+
+    height: 100vh;
     // links dynamic nav arrow to end of each section
+
+    // bg border divider
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+
+    //dark mode tranisition
+    transition: 0.3s ease-in-out;
+
+}
+
+
+section .wrapper {
+    height: 100%;
+    padding: 60px 0;
+}
+
+
+.bgDivider {
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+
+    .svgDivider {
+        height: 100%;
+        overflow: hidden;
+        display: block;
+    }
+
+    .toAbout {
+        fill: $accentBlue;
+    }
+
+    .toContact {
+        fill: $accentGreen;
+    }
+
+    .toSkill {
+        @include themed() {
+            fill: t(bgColor);
+        }
+    }
 }
 
 .navBtn {
+    position: absolute;
+    height: 90px;
+    width: 100%;
+    bottom: 0px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90px;
 
     transition: 0.2s ease;
 
     &:hover {
         background-color: rgba(94, 95, 179, 0.454);
+        backdrop-filter: blur(5px);
 
         .arrowContainer {
             transform: scale(1.4);
+        }
+
+        svg {
+            fill: $brandGreen;
         }
     }
 }
@@ -105,4 +167,10 @@ section {
     width: 50px;
     aspect-ratio: 1 / 1;
     transition: 0.2s ease;
+
+    svg {
+        fill: $accentBlue;
+        transition: 0.3s ease;
+        animation: levitate 1.5s ease-in-out infinite alternate;
+    }
 }

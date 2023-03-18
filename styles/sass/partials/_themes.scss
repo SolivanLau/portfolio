@@ -1,8 +1,20 @@
 @use './variables' as *;
 // themes: using same variable names that change value based on theme type (class of themeDark/themeLight on root element)
 $themes: (
-    Light: (bgColor: #CFD8DC, primeTextColor: rgb(149, 149, 240), secTextColor: red, activeTextColor:green, ),
-    Dark:(bgColor: #222222, primeTextColor: rgb(73, 73, 226), secTextColor: red, activeTextColor:green, )
+    Light: (bgColor: $white,
+        bgColorDark: $accentBlue,
+        primeTextColor: $darkBlue,
+        darkTextColor:$darkBlue,
+
+
+    ),
+
+    Dark:(bgColor: $darkBlue,
+        bgColorDark: $accentBlue,
+        primeTextColor: $white,
+        darkTextColor:$darkBlue,
+
+    )
 );
 
 
@@ -13,7 +25,7 @@ $themes: (
     @each $theme,
     $map in $themes {
 
-        // using keyword theme+ThemeName as class selector
+        // using keyword themeName as class selector
         .theme#{$theme} & {
             $theme-map: () !global;
 

@@ -3,8 +3,35 @@ $titleFont: 'Work Sans', sans-serif;
 $baseFont: 'Merriweather', serif;
 
 // colors
-$test1: #F4F1DE;
-$test2: #E07A5F;
-$test3: #3D405B;
-$test4: #81B29A;
-$test5: #F2CC8F;
+$white: #F1F2F0;
+$accentGreen: #3ad167;
+$brandGreen: #A1EFA7;
+$accentBlue: #7B8898;
+$darkBlue: #373849;
+
+// fontSizes
+$headingFontSize: 4.236rem;
+
+$subHeadingFontSize: 2.618rem;
+$bodyFontSize: 1rem;
+// temp animation section
+
+@keyframes levitate {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes slightRotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(5deg);
+    }
+}

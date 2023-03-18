@@ -1,12 +1,13 @@
+// general format and style
 @use './partials/setup';
 @use './partials/variables' as *;
+@use './partials/themes' as *;
 @use './partials/global';
 // @use './partials/underConstruction';
 
-// by section
+// specific section
 @use './partials/header';
 @use './partials/about';
 @use './partials/skills';
 @use './partials/projects';
-
 @use './partials/contact';

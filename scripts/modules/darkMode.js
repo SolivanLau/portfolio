@@ -1,3 +1,5 @@
+
+
 // theme toggle btn
 const toggleIcon = document.getElementById('toggleIcon')
 
@@ -13,15 +15,14 @@ const applyTheme = () => {
 
         toggleIcon.classList.add('dark');
         toggleIcon.classList.remove('light');
-
-        console.log('dark mode')
+        // console.log('dark mode')
     } else {
         rootElement.classList.add('themeLight');
         rootElement.classList.remove('themeDark');
 
         toggleIcon.classList.add('light');
         toggleIcon.classList.remove('dark');
-        console.log('light mode')
+        // console.log('light mode')
 
     }
 }
@@ -30,10 +31,10 @@ const applyTheme = () => {
 // checking preference on load
 export const checkUserTheme = () => {
     if (userThemePreference.matches === true) {
-        console.log(`${userThemePreference.matches}, set toggle button to dark mode`)
+        // console.log(`${userThemePreference.matches}, set toggle button to dark mode`)
         darkModeStatus = true;
     } else {
-        console.log(`${userThemePreference.matches}, set toggle button to light mode`)
+        // console.log(`${userThemePreference.matches}, set toggle button to light mode`)
         darkModeStatus = false;
     }
     applyTheme()
@@ -41,7 +42,7 @@ export const checkUserTheme = () => {
 
 export const handleToggleDarkMode = () => {
     darkModeStatus = !darkModeStatus;
-    console.log(`darkModeStatus is currently ${darkModeStatus}`)
+    // console.log(`darkModeStatus is currently ${darkModeStatus}`)
     applyTheme()
 }
 
