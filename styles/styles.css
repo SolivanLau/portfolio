@@ -614,10 +614,6 @@ section .wrapper {
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
-.navBtn:hover {
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-}
 .navBtn:hover .arrowContainer {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
