@@ -7,7 +7,6 @@ header {
         // height: 100%;
         display: flex;
         flex-direction: column;
-
     }
 }
 
@@ -97,13 +96,12 @@ header {
         .lightIcon {
             opacity: 1;
             fill: orange;
-
         }
     }
 
 }
 
-// hero  section
+// HERO SECTION
 .heroSection {
     display: flex;
     justify-content: center;
@@ -126,14 +124,23 @@ header {
 }
 
 .brandLogo {
-    width: 100px;
+    width: 160px;
     aspect-ratio: 1/1;
-    background-color: $brandGreen;
     border-radius: 8px;
 
-    .mini {
+    &.mini {
         height: 40px;
         aspect-ratio: 1/1;
+    }
+}
+
+.slLogo {
+    fill: $brandGreen;
+}
+
+.slLogoSm {
+    @include themed() {
+        fill: t(primeTextColor);
     }
 }
 
@@ -144,9 +151,14 @@ header {
 
     .subText {
         font-size: $subHeadingFontSize;
+        font-family: $baseFont;
     }
 
 }
+
+
+
+// AVATAR SECTION
 
 .avatarContainer {
     background-image: url('../assets/icons/bgBlob.svg');
@@ -160,7 +172,51 @@ header {
         height: 100%;
         width: 100%;
     }
+
+    &:hover {
+        // #head {
+        //     rotate: -8deg;
+        //     translate: -10px 0px;
+        // }
+
+        #hairAccent {}
+    }
 }
 
 
 // avatar animations
+
+#head {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: 10s headRotate infinite alternate;
+}
+
+#hairAccent {
+    transform-origin: top center;
+    transform-box: fill-box;
+    animation: 1.5s rotate infinite alternate;
+
+}
+
+#rightArm {
+    transform-origin: top center;
+    transform-box: fill-box;
+
+    animation: 3.5s armRotate .4s infinite alternate;
+}
+
+#leftArm {
+    transform-origin: top center;
+    transform-box: fill-box;
+    animation: 2.8s armRotate infinite alternate;
+}
+
+#leftLeg {
+    // transform-origin: top center;
+    position: relative;
+    transform-origin: top;
+    transform-box: fill-box;
+    transform: translateX(-2px) translateY(6px);
+    animation: 1.7s rotate infinite alternate;
+}

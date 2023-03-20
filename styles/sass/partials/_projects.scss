@@ -1,51 +1,84 @@
 @use './variables' as *;
+@use './themes' as *;
 
-
+.projectCardList {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 50px 0;
+}
 
 // PROJECT CARD
 
 .projectCard {
     // flex: article and figure
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
     // dimensions
     width: 100%;
     min-height: 450px;
     padding: 25px;
     // card styles
-    margin: 50px 0;
     border-radius: 10px;
 
     // static text color
-    @include themed() {
-        color: t(darkTextColor);
-    }
-
-    &:hover {
-
-        .projectImgContainer img {
-            transform: scale(1.2) rotate(0deg) translate(-45px, -30px);
+    h3,
+    p,
+    li {
+        @include themed() {
+            color: t(darkTextColor);
         }
     }
 }
 
-// article section
+// PROJECT INFO SECTION
 .projectAbout {
     display: flex;
     flex-direction: column;
     width: 50%;
+    min-width: 455px;
+    flex-grow: 1;
 }
 
+// PROJECT LINKS/STACK GENERAL FORMAT
 .projectStack,
 .projectLinks {
     display: flex;
-    margin: 10px 0;
+    margin-top: 20px;
+    gap: 10px;
 }
 
 .projectStackItem,
 .projectLinkItem {
     margin: 0 10px 0 0;
+}
+
+.projectLinkItem {
+    transition: 0.2s ease;
+
+    &:hover {
+        scale: 1.03;
+    }
+}
+
+.linkBtn {
+    padding: 5px;
+    border: 2px solid $accentBlue;
+    border-radius: 10px;
+    background-color: $accentBlue;
+
+    @include themed() {
+        color: $white;
+    }
+
+    font-family: $titleFont;
+    font-weight: 700;
+
+
+
 }
 
 .projectFeatureList {
@@ -58,25 +91,54 @@
     margin: 10px;
 }
 
-// img
+// PROJECT IMAGE SECTION
+
 .projectImgContainer {
-    display: flex;
-    align-items: center;
-    width: 40%;
+    width: 48%;
+    min-width: 450px;
+    flex-grow: 1;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 10px;
+    align-self: center;
+
+    position: relative;
+
+    transition: 0.2s ease;
 
     img {
-        border-radius: 10px;
-        object-fit: contain;
-        transform: scale(1.1) rotate(6.4deg);
-        transition: 0.2s ease;
+        object-fit: cover;
+        object-position: top center;
     }
 
+    &:hover {
+        scale: 1.02;
 
+        .projectOverlay {
+            opacity: 1;
+        }
+    }
 }
 
-// project specific colors
+.projectOverlay {
+    // Overlay format
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.193);
+    opacity: 0;
+    z-index: 10;
+
+    // transition
+    transition: 0.3s ease;
+}
+
+// PROJECT SPECIFIC COLORS
 .delicious {
-    background-color: rgb(194, 250, 194);
+    background-color: $brandGreen;
 }
 
 .randomQuiz {

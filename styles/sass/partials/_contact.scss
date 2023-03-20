@@ -7,36 +7,73 @@ section.contact {
 
     .wrapper {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-        gap: 30px;
+        column-gap: 30px;
+        // shortcut link 
+        position: relative;
     }
 }
 
 // CONTACT TEXT
 .contactInfo {
     width: 30%;
+    min-width: 340px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
+
+}
+
+.connectContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .socialList {
     display: flex;
-    margin: 20px 0;
-    gap: 20px
+    flex-direction: column;
+    margin: 25px 0;
+    row-gap: 15px;
+    column-gap: 25px;
+}
+
+.socialItem {
+    width: calc(100 / 3 - 20);
+    min-width: none;
+}
+
+.socialLink {
+    width: fit-content;
+    display: flex;
+    gap: 20px;
+
+    &:hover {
+        .socialContainer {
+            fill: $brandGreen;
+            scale: 1.15;
+            rotate: -5deg;
+            animation: levitate 0.8s alternate infinite ease-in-out;
+        }
+    }
 }
 
 .socialContainer {
+    width: 50px;
+    aspect-ratio: 1 / 1;
     fill: $darkBlue;
-
     transition: 0.2s ease;
 
-    &:hover {
-        fill: $brandGreen;
-        scale: 1.15;
-        rotate: -5deg;
-        animation: levitate 0.8s alternate infinite ease-in-out;
+}
+
+.socialHandle {
+    font-family: $titleFont;
+    font-weight: 700;
+    align-self: center;
+
+    @include themed() {
+        color: $darkBlue;
     }
 }
 
@@ -44,8 +81,8 @@ section.contact {
 // CONTACT FORM
 .contactForm {
     width: 50%;
-    height: 100%;
-    min-height: fit-content;
+    flex-grow: 1;
+    min-width: 355px;
     border-radius: 8px;
 
     @include themed() {
@@ -94,13 +131,12 @@ section.contact {
 
     @include themed() {
         background-color: t(bgColor);
-    }
-
-    border-bottom: 2px solid $brandGreen;
-
-    @include themed() {
         color: t(primeTextColor);
+
+        border-bottom: 2px solid t(formText);
     }
+
+
 
     // &.msg {
     //     min-height: 150px;
@@ -117,34 +153,51 @@ section.contact {
     top: 26px;
     // animation
     transition: 0.2s ease;
-    color: $accentGreen;
+
+    @include themed() {
+        color: t(formText);
+    }
+}
+
+// js class: labels to top of container
+.labelToTop {
+    top: 5px;
+    font-size: .75rem;
 }
 
 // SUBMIT BUTTON
 .contactSubmit {
     margin: 20px 10px 40px;
     border-radius: 10px;
-    border: 2px solid $brandGreen;
-    color: $brandGreen;
 
     @include themed() {
         background-color: t(bgColor);
+        border: 2px solid t(formText);
+        color: t(formText);
     }
 
-    transition: 0.5s ease;
+    transition: 0.3s ease-in-out;
 
     &:hover {
         cursor: pointer;
 
         @include themed() {
-            color: t(primeTextColor);
-            border: 2px solid t(primeTextColor);
+            color: t(formHover);
+            border: 2px solid t(formHover);
         }
+    }
 
+    &:active {
+        @include themed() {
+            color: t(formActive);
+            border: 2px solid t(formActive);
+        }
     }
 }
 
-.labelToTop {
-    top: 5px;
-    font-size: .75rem;
+
+// LINK TO TOP
+
+.topShortCut {
+    rotate: 180deg;
 }

@@ -4,28 +4,35 @@ $themes: (
     Light: (bgColor: $white,
         bgColorDark: $accentBlue,
         primeTextColor: $darkBlue,
-        darkTextColor:$darkBlue,
-
-
-    ),
+        darkTextColor: $darkBlue,
+        formText: $darkBlue,
+        formHover: $accentBlue,
+        formActive: $brandGreen,
+        darkLink: $accentBlue),
 
     Dark:(bgColor: $darkBlue,
         bgColorDark: $accentBlue,
         primeTextColor: $white,
         darkTextColor:$darkBlue,
-
-    )
+        formText:$brandGreen,
+        formHover:$accentGreen ,
+        formActive:$white,
+        darkLink: $accentGreen)
 );
 
 
 
+// setup of mixin
+
+// on calling '@include theme'
+// // 
 
 @mixin themed() {
 
     @each $theme,
     $map in $themes {
 
-        // using keyword themeName as class selector
+        // setting keyword themeName as modes - when variables change
         .theme#{$theme} & {
             $theme-map: () !global;
 

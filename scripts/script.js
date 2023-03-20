@@ -58,3 +58,12 @@ const avatarLLeg = document.getElementById('leftLeg')
 // 2. function to choose random value from array
 // 3.
 // setTimeout()
+
+
+const logoMain = document.getElementById('logoMain');
+
+const logoPaths = logoMain.children
+
+for (let pathElement = 0; pathElement < logoPaths.length; pathElement++) {
+    console.log(logoPaths[pathElement].getTotalLength())
+}

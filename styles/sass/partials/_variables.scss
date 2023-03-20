@@ -1,12 +1,14 @@
 // Fonts
-$titleFont: 'Work Sans', sans-serif;
-$baseFont: 'Merriweather', serif;
+$titleFont: 'Montserrat', sans-serif;
+$baseFont: 'Hind', sans-serif;
+
+
 
 // colors
-$white: #F1F2F0;
-$accentGreen: #3ad167;
-$brandGreen: #A1EFA7;
-$accentBlue: #7B8898;
+$white: #e7e8e7;
+$accentGreen: #37b45d;
+$brandGreen: #81c687;
+$accentBlue: #8c99aa;
 $darkBlue: #373849;
 
 // fontSizes
@@ -14,8 +16,9 @@ $headingFontSize: 4.236rem;
 
 $subHeadingFontSize: 2.618rem;
 $bodyFontSize: 1rem;
-// temp animation section
 
+// animations section
+// 
 @keyframes levitate {
     from {
         transform: translateY(0px);
@@ -33,5 +36,104 @@ $bodyFontSize: 1rem;
 
     to {
         transform: rotate(5deg);
+    }
+}
+
+@keyframes headRotate {
+    0% {
+        rotate: 0deg;
+        translate: 0;
+    }
+
+    7% {
+        rotate: -2.6deg;
+        translate: -3px;
+    }
+
+    // start rotate
+    15% {
+        rotate: 0deg;
+        translate: 0;
+    }
+
+    25% {
+        rotate: 4.4deg;
+        translate: 10px 0px;
+    }
+
+    70% {
+        rotate: 4deg;
+        translate: 5px 0px;
+    }
+
+    78% {
+        rotate: -2.1deg;
+        translate: -3px 0px;
+    }
+
+    85% {
+        rotate: -2.1deg;
+        translate: -3px 0px;
+    }
+
+    100% {
+        rotate: -5deg;
+        translate: -7px 0px;
+    }
+}
+
+@keyframes armRotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    15% {
+        rotate: -1.3deg;
+    }
+
+    25% {
+        rotate: 1.6deg;
+    }
+
+    30% {
+        rotate: 1.1deg;
+    }
+
+    45% {
+        rotate: 1.4deg;
+    }
+
+    60% {
+        rotate: 0.7deg;
+    }
+
+    80% {
+        rotate: 0.7deg;
+    }
+
+    85% {
+        rotate: 1.5deg;
+    }
+
+    87% {
+        rotate: .8deg;
+    }
+
+    92% {
+        rotate: 1deg;
+    }
+
+    100% {
+        rotate: .5deg;
+    }
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 2.2deg;
     }
 }
