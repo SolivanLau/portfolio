@@ -552,7 +552,7 @@ section {
 
 header,
 section {
-  width: 100vw;
+  width: 100%;
   position: relative;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
