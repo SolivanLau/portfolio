@@ -42,4 +42,29 @@
     .aboutImg {
         min-width: 300px;
     }
+
+    // PROJECTS SECTION
+
+    .projectCard {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .projectAbout,
+    .projectImgContainer {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .projectLinks {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .projectLinkItem {
+
+        flex-grow: 1;
+    }
 }
