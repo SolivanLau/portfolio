@@ -96,8 +96,9 @@
 .projectImgContainer {
     width: 48%;
     min-width: 450px;
+    max-height: 320px;
+    height: fit-content;
     flex-grow: 1;
-    height: 320px;
     overflow: hidden;
     border-radius: 10px;
     align-self: center;

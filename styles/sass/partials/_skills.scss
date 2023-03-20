@@ -3,18 +3,16 @@
 
 
 .techStack {
-    margin-top: 60px;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5px;
 }
 
 .techContainer {
-    width: 23%;
+    width: calc(100% / 4);
     min-width: 200px;
-    height: 260px;
+    height: 250px;
     position: relative;
 
     &:hover,

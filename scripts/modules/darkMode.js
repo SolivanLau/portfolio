@@ -15,14 +15,12 @@ const applyTheme = () => {
 
         toggleIcon.classList.add('dark');
         toggleIcon.classList.remove('light');
-        // console.log('dark mode')
     } else {
         rootElement.classList.add('themeLight');
         rootElement.classList.remove('themeDark');
 
         toggleIcon.classList.add('light');
         toggleIcon.classList.remove('dark');
-        // console.log('light mode')
 
     }
 }

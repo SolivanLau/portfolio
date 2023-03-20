@@ -1,5 +1,72 @@
 @use './variables' as *;
+@use './themes' as *;
 
 section.about {
     background-color: $accentBlue;
+
+    h2,
+    p {
+        @include themed() {
+            color: $darkBlue;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 50px;
+        row-gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+.aboutImg {
+    width: 35%;
+    min-width: 325px;
+    height: fit-content;
+
+    img {
+        border-radius: 10px;
+
+    }
+}
+
+.aboutMe,
+.aboutTextContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutMe {
+    width: 60%;
+    min-width: 550px;
+}
+
+.aboutTextContainer {
+    flex-grow: 1;
+    gap: 15px;
+
+    // typographic edits 
+    p {
+        font-size: $bodyFontSize;
+        line-height: 1.5;
+    }
+
+    .highlight {
+        display: inline-block;
+        margin: 10px 0;
+        font-family: $titleFont;
+        font-size: $lgBodyFontSz;
+        font-weight: 700;
+
+        background-color: $darkBlue;
+        padding: 10px;
+        border-radius: 10px;
+
+        @include themed() {
+            color: $brandGreen;
+        }
+    }
 }

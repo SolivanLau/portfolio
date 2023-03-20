@@ -16,6 +16,17 @@ ul {
     margin: 0;
 }
 
+// BUTTON AND LINKS
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    padding: 10px;
+}
+
+// FORM ELEMENTS
 input,
 textarea {
     outline: none;
@@ -29,6 +40,13 @@ textarea {
     padding: 0;
 }
 
+.wrapper {
+    max-width: 1440px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+// TYPOGRAPHIC ELEMENTS
 h1,
 h2,
 h3,
@@ -54,20 +72,11 @@ h6 {
     font-family: $titleFont;
 }
 
-a {
-    text-decoration: none;
+h2 {
+    margin-bottom: 50px;
+    font-size: $subHeadingFontSize;
 }
 
-button {
-    border: none;
-    padding: 10px;
-}
-
-.wrapper {
-    max-width: 1440px;
-    width: 85%;
-    margin: 0 auto;
-}
 
 // IMG/SVG CONTAINERS
 img {
@@ -93,7 +102,6 @@ header {
 
 section {
     min-height: 100vh;
-
 }
 
 header,
@@ -114,9 +122,8 @@ section {
 
 section .wrapper {
     min-height: 100vh;
-    padding: 90px 0;
+    padding: 45px 0 90px 0;
     z-index: 10;
-
 }
 
 
@@ -196,6 +203,7 @@ section .wrapper {
         fill: $darkBlue;
     }
 }
+
 
 footer {
     padding: 10px 0;

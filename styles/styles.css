@@ -453,6 +453,15 @@ ul {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  padding: 10px;
+}
+
 input,
 textarea {
   outline: none;
@@ -464,6 +473,12 @@ textarea {
   height: 100%;
   width: 100%;
   padding: 0;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 85%;
+  margin: 0 auto;
 }
 
 h1,
@@ -507,19 +522,9 @@ h6 {
   font-family: "Montserrat", sans-serif;
 }
 
-a {
-  text-decoration: none;
-}
-
-button {
-  border: none;
-  padding: 10px;
-}
-
-.wrapper {
-  max-width: 1440px;
-  width: 85%;
-  margin: 0 auto;
+h2 {
+  margin-bottom: 50px;
+  font-size: 2.618rem;
 }
 
 img {
@@ -562,7 +567,7 @@ section {
 
 section .wrapper {
   min-height: 100vh;
-  padding: 90px 0;
+  padding: 45px 0 90px 0;
   z-index: 10;
 }
 
@@ -666,6 +671,7 @@ footer {
 }
 
 header .wrapper {
+  height: calc(100% - 90px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -793,6 +799,7 @@ header .wrapper {
   -webkit-column-gap: 50px;
      -moz-column-gap: 50px;
           column-gap: 50px;
+  height: 100%;
 }
 
 .brandBanner {
@@ -802,6 +809,9 @@ header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -811,11 +821,6 @@ header .wrapper {
           flex-grow: 1;
   width: 65%;
   min-width: 600px;
-}
-
-.brandLink {
-  height: 100%;
-  aspect-ratio: 1/1;
 }
 
 .brandLogo {
@@ -908,9 +913,91 @@ header .wrapper {
 section.about {
   background-color: #8c99aa;
 }
+.themeLight section.about h2,
+.themeLight section.about p {
+  color: #373849;
+}
+.themeDark section.about h2,
+.themeDark section.about p {
+  color: #373849;
+}
+section.about .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
+  row-gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.aboutImg {
+  width: 35%;
+  min-width: 325px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.aboutImg img {
+  border-radius: 10px;
+}
+
+.aboutMe,
+.aboutTextContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aboutMe {
+  width: 60%;
+  min-width: 550px;
+}
+
+.aboutTextContainer {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  gap: 15px;
+}
+.aboutTextContainer p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.aboutTextContainer .highlight {
+  display: inline-block;
+  margin: 10px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: #373849;
+  padding: 10px;
+  border-radius: 10px;
+}
+.themeLight .aboutTextContainer .highlight {
+  color: #81c687;
+}
+.themeDark .aboutTextContainer .highlight {
+  color: #81c687;
+}
 
 .techStack {
-  margin-top: 60px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -920,13 +1007,12 @@ section.about {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 5px;
 }
 
 .techContainer {
-  width: 23%;
+  width: 25%;
   min-width: 200px;
-  height: 260px;
+  height: 250px;
   position: relative;
 }
 .techContainer:hover .techIcon, .techContainer:focus .techIcon {
@@ -1085,10 +1171,13 @@ section.about {
 .projectImgContainer {
   width: 48%;
   min-width: 450px;
+  max-height: 320px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  height: 320px;
   overflow: hidden;
   border-radius: 10px;
   -ms-flex-item-align: center;
@@ -1135,6 +1224,7 @@ section.contact {
   background: #37b45d;
 }
 section.contact .wrapper {
+  height: calc(80vh - 90px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1147,6 +1237,10 @@ section.contact .wrapper {
      -moz-column-gap: 30px;
           column-gap: 30px;
   position: relative;
+  padding-bottom: 0px;
+}
+section.contact .navBtn {
+  position: static;
 }
 
 .contactInfo {
@@ -1172,7 +1266,10 @@ section.contact .wrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+}
+.connectContainer h2 {
+  margin: 0;
 }
 
 .socialList {
@@ -1354,6 +1451,40 @@ section.contact .wrapper {
   border: 2px solid #e7e8e7;
 }
 
-.topShortCut {
-  rotate: 180deg;
+@media (max-width: 795px) {
+  .heroSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 100%;
+  }
+  .brandBanner,
+  .avatarContainer {
+    width: 100%;
+  }
+  .brandText h1 {
+    font-size: 2.618rem;
+  }
+  .brandText .subText {
+    font-size: 1.2rem;
+  }
+  .aboutTextContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 100%;
+  }
+  .aboutMe {
+    width: 100%;
+    min-width: auto;
+  }
+  .aboutImg {
+    min-width: 300px;
+  }
 }

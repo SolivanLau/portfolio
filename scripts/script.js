@@ -18,7 +18,6 @@ window.addEventListener("load", () => {
     checkUserTheme()
     //reset contact form
     contactFrom.reset();
-    console.log('check')
 });
 // build nav link per section
 buildNav(navItems, sideNav);
@@ -60,10 +59,3 @@ const avatarLLeg = document.getElementById('leftLeg')
 // setTimeout()
 
 
-const logoMain = document.getElementById('logoMain');
-
-const logoPaths = logoMain.children
-
-for (let pathElement = 0; pathElement < logoPaths.length; pathElement++) {
-    console.log(logoPaths[pathElement].getTotalLength())
-}

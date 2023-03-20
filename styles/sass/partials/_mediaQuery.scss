@@ -1,0 +1,45 @@
+@use './variables' as *;
+@use './themes' as *;
+
+@media(max-width: 795px) {
+
+    // HEADER ADJUSTMENT
+
+    .heroSection {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .brandBanner,
+    .avatarContainer {
+        width: 100%;
+    }
+
+    .brandText {
+        h1 {
+            font-size: $subHeadingFontSize;
+        }
+
+        .subText {
+            font-size: $lgBodyFontSz;
+        }
+    }
+
+    // ABOUT SECTION
+    .aboutTextContainer {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+
+    .aboutMe {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .aboutImg {
+        min-width: 300px;
+    }
+}
