@@ -421,6 +421,26 @@ html {
     rotate: 2.2deg;
   }
 }
+@-webkit-keyframes navLinkAnimate {
+  from {
+    rotate: 0deg;
+    scale: 1;
+  }
+  to {
+    rotate: 1.12deg;
+    scale: 1.01;
+  }
+}
+@keyframes navLinkAnimate {
+  from {
+    rotate: 0deg;
+    scale: 1;
+  }
+  to {
+    rotate: 1.12deg;
+    scale: 1.01;
+  }
+}
 html {
   font-size: 125%;
   scroll-behavior: smooth;
@@ -517,9 +537,16 @@ figure {
   padding: 0;
 }
 
-header,
+header {
+  height: 100vh;
+}
+
 section {
   min-height: 100vh;
+}
+
+header,
+section {
   position: relative;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
@@ -687,6 +714,22 @@ header .wrapper {
           align-items: center;
 }
 
+.linkItem {
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.linkItem:hover {
+  rotate: -6deg;
+  scale: 1.1;
+  translate: 0 -5px;
+}
+.themeLight .linkItem:hover a {
+  color: #81c687;
+}
+.themeDark .linkItem:hover a {
+  color: #81c687;
+}
+
 .subText {
   display: block;
 }
@@ -745,7 +788,11 @@ header .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 50px;
+     -moz-column-gap: 50px;
+          column-gap: 50px;
 }
 
 .brandBanner {
@@ -758,7 +805,12 @@ header .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 18px;
+  gap: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 65%;
+  min-width: 600px;
 }
 
 .brandLink {
@@ -800,12 +852,15 @@ header .wrapper {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 500px;
-  width: 400px;
+  width: 30%;
+  max-height: 500px;
+  aspect-ratio: 400/500;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .avatarContainer svg {
   height: 100%;
-  width: 100%;
 }
 #head {
   -webkit-transform-origin: center;
@@ -865,7 +920,7 @@ section.about {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
 }
 
 .techContainer {
@@ -897,6 +952,7 @@ section.about {
   transition: 0.2s ease;
 }
 .techIcon h3 {
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -910,10 +966,16 @@ section.about {
   padding: 10px;
   text-align: center;
   border-radius: 8px;
-  background-color: #8c99aa;
+  background-color: #81c687;
   opacity: 0;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+}
+.themeLight .techInfo p {
+  color: #373849;
+}
+.themeDark .techInfo p {
+  color: #e7e8e7;
 }
 
 .projectCardList {

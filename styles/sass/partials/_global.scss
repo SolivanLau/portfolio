@@ -87,23 +87,29 @@ figure {
 }
 
 // NAVIGATION SECTION STYLES
+header {
+    height: 100vh;
+}
+
+section {
+    min-height: 100vh;
+
+}
+
 header,
 section {
     @include themed() {
         background-color: t(bgColor);
     }
 
-    min-height: 100vh;
     // links dynamic nav arrow to end of each section
-
     // bg border divider
     position: relative;
-
-
     //dark mode tranisition
     transition: 0.3s ease-in-out;
-
 }
+
+
 
 
 section .wrapper {

@@ -137,3 +137,15 @@ $bodyFontSize: 1rem;
         rotate: 2.2deg;
     }
 }
+
+@keyframes navLinkAnimate {
+    from {
+        rotate: 0deg;
+        scale: 1;
+    }
+
+    to {
+        rotate: 1.12deg;
+        scale: 1.01;
+    }
+}

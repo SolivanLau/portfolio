@@ -43,6 +43,22 @@ header {
     align-items: center;
 }
 
+.linkItem {
+
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        rotate: -6deg;
+        scale: 1.1;
+        translate: 0 -5px;
+
+        a {
+            @include themed() {
+                color: $brandGreen;
+            }
+        }
+    }
+}
 
 .subText {
     display: block;
@@ -106,21 +122,23 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    flex-wrap: wrap;
+    column-gap: 50px;
 }
 
 .brandBanner {
     height: fit-content;
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 10px;
+    flex-grow: 1;
+    width: 65%;
+    min-width: 600px;
 }
 
 .brandLink {
     height: 100%;
     aspect-ratio: 1/1;
-
-
 }
 
 .brandLogo {
@@ -165,12 +183,13 @@ header {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 500px;
-    width: 400px;
+    width: 30%;
+    max-height: 500px;
+    aspect-ratio: 400 / 500;
+    flex-grow: 1;
 
     svg {
         height: 100%;
-        width: 100%;
     }
 
     &:hover {
