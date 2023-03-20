@@ -10,7 +10,7 @@ header {
     }
 }
 
-
+// NAV BAR 
 .navBar {
     // dimensions
     width: 100%;
@@ -116,6 +116,31 @@ header {
         }
     }
 
+}
+
+// Mobile Menu
+.menuContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.mobileMenu {
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: $brandGreen;
+
+    svg {
+        @include themed() {
+            fill: t(primeTextColor);
+        }
+
+        height: 100%;
+    }
+
+    display: none;
 }
 
 // HERO SECTION
