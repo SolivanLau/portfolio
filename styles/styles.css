@@ -421,6 +421,20 @@ html {
     rotate: 2.2deg;
   }
 }
+@-webkit-keyframes navBarLink {
+  100% {
+    rotate: -6deg;
+    scale: 1.1;
+    translate: 0 -5px;
+  }
+}
+@keyframes navBarLink {
+  100% {
+    rotate: -6deg;
+    scale: 1.1;
+    translate: 0 -5px;
+  }
+}
 @-webkit-keyframes navLinkAnimate {
   from {
     rotate: 0deg;
@@ -703,7 +717,7 @@ header .wrapper {
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
-  width: 60%;
+  width: 80%;
 }
 
 .linkList {
@@ -721,15 +735,18 @@ header .wrapper {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
-.linkItem:hover {
+.linkItem:hover,
+.linkItem :focus-visible {
   rotate: -6deg;
   scale: 1.1;
   translate: 0 -5px;
 }
-.themeLight .linkItem:hover a {
+.themeLight .linkItem:hover a,
+.themeLight .linkItem :focus-visible a {
   color: #81c687;
 }
-.themeDark .linkItem:hover a {
+.themeDark .linkItem:hover a,
+.themeDark .linkItem :focus-visible a {
   color: #81c687;
 }
 
@@ -797,6 +814,8 @@ header .wrapper {
   padding: 5px;
   border-radius: 50%;
   background-color: #81c687;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
   display: none;
 }
 .mobileMenu svg {
@@ -807,6 +826,15 @@ header .wrapper {
 }
 .themeDark .mobileMenu svg {
   fill: #e7e8e7;
+}
+.mobileMenu:hover, .mobileMenu:focus-visible {
+  cursor: pointer;
+}
+.themeLight .mobileMenu:hover, .themeLight .mobileMenu:focus-visible {
+  background-color: #37b45d;
+}
+.themeDark .mobileMenu:hover, .themeDark .mobileMenu:focus-visible {
+  background-color: #37b45d;
 }
 
 .heroSection {
@@ -1542,5 +1570,53 @@ section.contact .navBtn {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+  }
+}
+@media (max-width: 595px) {
+  .navBar {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: relative;
+  }
+  .mobileMenu {
+    display: block;
+  }
+  .brandLogo {
+    display: none;
+  }
+  .linkContainer {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 200px;
+    border-radius: 10px;
+  }
+  .themeLight .linkContainer {
+    background-color: #8c99aa;
+  }
+  .themeDark .linkContainer {
+    background-color: #8c99aa;
+  }
+  .linkList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin: 20px;
+    text-align: right;
+  }
+  .linkItem:hover,
+  .linkItem :focus-visible {
+    rotate: 6deg;
+  }
+  .userInfoContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }

@@ -139,6 +139,15 @@ $bodyFontSize: 1rem;
     }
 }
 
+@keyframes navBarLink {
+    100% {
+        rotate: -6deg;
+        scale: 1.1;
+        translate: 0 -5px;
+    }
+}
+
+
 @keyframes navLinkAnimate {
     from {
         rotate: 0deg;

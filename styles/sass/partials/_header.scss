@@ -33,7 +33,7 @@ header {
     gap: 20px;
 
     // justify-content: space-between;
-    width: 60%;
+    width: 80%;
 }
 
 .linkList {
@@ -42,16 +42,19 @@ header {
     gap: 20px;
 
     align-items: center;
+
 }
 
 .linkItem {
 
     transition: 0.2s ease-in-out;
 
-    &:hover {
+    &:hover,
+    :focus-visible {
         rotate: -6deg;
         scale: 1.1;
         translate: 0 -5px;
+
 
         a {
             @include themed() {
@@ -140,6 +143,20 @@ header {
         height: 100%;
     }
 
+
+    transition: 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+
+        cursor: pointer;
+
+        @include themed() {
+            background-color: $accentGreen;
+        }
+
+    }
+
     display: none;
 }
 
@@ -222,7 +239,7 @@ header {
         //     translate: -10px 0px;
         // }
 
-        #hairAccent {}
+        // #hairAccent {}
     }
 }
 
