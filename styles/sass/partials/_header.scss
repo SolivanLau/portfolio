@@ -206,15 +206,16 @@ header {
 .brandText {
     h1 {
         font-size: $headingFontSize;
+        text-align: ceter;
     }
 
-    .subText {
-        font-size: $subHeadingFontSize;
-        font-family: $baseFont;
-    }
 
 }
 
+.subText {
+    font-size: $subHeadingFontSize;
+    font-family: $baseFont;
+}
 
 
 // AVATAR SECTION

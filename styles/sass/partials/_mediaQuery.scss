@@ -26,6 +26,10 @@
         }
     }
 
+    .brandLogo {
+        width: 100px;
+    }
+
     // ABOUT SECTION
     .aboutTextContainer {
         flex-direction: column;
@@ -132,6 +136,12 @@
             rotate: 6deg;
 
         }
+    }
+
+
+    // heroSection
+    .subText {
+        text-align: center;
     }
 
     // form updates

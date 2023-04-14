@@ -6,7 +6,8 @@ section.contact {
     background: $accentGreen;
 
     .wrapper {
-        height: calc(80vh - 90px);
+        // min-height: calc(80vh - 90px);
+
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -23,7 +24,7 @@ section.contact {
 
 // CONTACT TEXT
 .contactInfo {
-    width: 30%;
+    width: 40%;
     min-width: 340px;
     flex-grow: 1;
     display: flex;
@@ -59,12 +60,14 @@ section.contact {
     display: flex;
     gap: 20px;
 
+    transition: 0.2s all ease-in-out;
+
     &:hover {
         .socialContainer {
             fill: $brandGreen;
             scale: 1.15;
             rotate: -5deg;
-            animation: levitate 0.8s alternate infinite ease-in-out;
+            animation: levitate 0.8s 0.2s alternate infinite ease-in-out;
         }
     }
 }
@@ -92,7 +95,6 @@ section.contact {
 .contactForm {
     width: 50%;
     flex-grow: 1;
-    min-width: 355px;
     border-radius: 8px;
 
     @include themed() {

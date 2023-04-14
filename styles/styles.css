@@ -922,8 +922,10 @@ header .wrapper {
 
 .brandText h1 {
   font-size: 4.236rem;
+  text-align: ceter;
 }
-.brandText .subText {
+
+.subText {
   font-size: 2.618rem;
   font-family: "Hind", sans-serif;
 }
@@ -1300,7 +1302,6 @@ section.contact {
   background: #37b45d;
 }
 section.contact .wrapper {
-  height: calc(80vh - 90px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1320,7 +1321,7 @@ section.contact .navBtn {
 }
 
 .contactInfo {
-  width: 30%;
+  width: 40%;
   min-width: 340px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -1376,13 +1377,15 @@ section.contact .navBtn {
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 .socialLink:hover .socialContainer {
   fill: #81c687;
   scale: 1.15;
   rotate: -5deg;
-  -webkit-animation: levitate 0.8s alternate infinite ease-in-out;
-          animation: levitate 0.8s alternate infinite ease-in-out;
+  -webkit-animation: levitate 0.8s 0.2s alternate infinite ease-in-out;
+          animation: levitate 0.8s 0.2s alternate infinite ease-in-out;
 }
 
 .socialContainer {
@@ -1411,7 +1414,6 @@ section.contact .navBtn {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  min-width: 355px;
   border-radius: 8px;
   padding: 0px 15px;
   display: -webkit-box;
@@ -1547,6 +1549,9 @@ section.contact .navBtn {
   .brandText .subText {
     font-size: 1.2rem;
   }
+  .brandLogo {
+    width: 100px;
+  }
   .aboutTextContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1649,6 +1654,9 @@ section.contact .navBtn {
   .linkItem:hover,
   .linkItem :focus-visible {
     rotate: 6deg;
+  }
+  .subText {
+    text-align: center;
   }
   .userInfoContainer {
     -webkit-box-orient: vertical;
