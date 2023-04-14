@@ -436,23 +436,47 @@ html {
   }
 }
 @-webkit-keyframes navLinkAnimate {
-  from {
-    rotate: 0deg;
-    scale: 1;
-  }
-  to {
+  100% {
     rotate: 1.12deg;
     scale: 1.01;
   }
 }
 @keyframes navLinkAnimate {
-  from {
-    rotate: 0deg;
-    scale: 1;
-  }
-  to {
+  100% {
     rotate: 1.12deg;
     scale: 1.01;
+  }
+}
+@-webkit-keyframes menuOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes menuOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes menuGone {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes menuGone {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 html {
@@ -873,7 +897,6 @@ header .wrapper {
       -ms-flex-positive: 1;
           flex-grow: 1;
   width: 65%;
-  min-width: 600px;
 }
 
 .brandLogo {
@@ -1586,11 +1609,15 @@ section.contact .navBtn {
     display: none;
   }
   .linkContainer {
+    display: none;
     position: absolute;
     top: 50px;
     right: 0px;
     width: 200px;
     border-radius: 10px;
+    -webkit-transition: 0.3 ease-in-out;
+    transition: 0.3 ease-in-out;
+    opacity: 0;
   }
   .themeLight .linkContainer {
     background-color: #8c99aa;
@@ -1598,7 +1625,17 @@ section.contact .navBtn {
   .themeDark .linkContainer {
     background-color: #8c99aa;
   }
+  .linkContainer.openMobileNav {
+    display: block;
+    -webkit-animation: menuOpen 0.2s 0.1s forwards;
+            animation: menuOpen 0.2s 0.1s forwards;
+  }
+  .linkContainer.removeMobileNav {
+    -webkit-animation: menuGone 0.2s forwards;
+            animation: menuGone 0.2s forwards;
+  }
   .linkList {
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1606,7 +1643,7 @@ section.contact .navBtn {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    margin: 20px;
+    padding: 20px;
     text-align: right;
   }
   .linkItem:hover,
