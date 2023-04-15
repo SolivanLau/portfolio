@@ -138,7 +138,6 @@
         }
     }
 
-
     // heroSection
     .subText {
         text-align: center;
@@ -147,5 +146,54 @@
     // form updates
     .userInfoContainer {
         flex-direction: column;
+    }
+}
+
+
+@media (max-width:400px) {
+    .projectStack {
+        justify-content: center;
+    }
+
+    .projectStackItem {
+        width: 40%;
+    }
+
+    .contact .wrapper {
+
+        flex-direction: column;
+    }
+
+    // CONTACT SECTION
+    // connect container
+    .contactInfo,
+    .contactForm {
+        width: 100%;
+    }
+
+    .contactInfo {
+        min-width: auto;
+    }
+
+    .socialContainer {
+        width: 40px;
+    }
+
+    .socialHandle {
+        font-size: 0.85rem;
+    }
+}
+
+@media(max-width: 380px) {
+    .brandText {
+        text-align: center;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .subText {
+            font-size: 1rem;
+        }
     }
 }

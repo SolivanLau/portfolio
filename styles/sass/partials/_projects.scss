@@ -34,7 +34,23 @@
     }
 }
 
+
 // PROJECT INFO SECTION
+
+.projectTitle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.projectIcon {
+    width: 50px;
+    height: 50px;
+
+    animation: levitate 1s alternate infinite ease-in-out;
+}
+
 .projectAbout {
     display: flex;
     flex-direction: column;
@@ -51,44 +67,54 @@
     gap: 10px;
 }
 
+
+.projectStack {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
 .projectStackItem,
 .projectLinkItem {
-    margin: 0 10px 0 0;
+    gap: 10px;
+    font-weight: 700;
 }
+
 
 .projectLinkItem {
     transition: 0.2s ease;
 
     &:hover {
-        scale: 1.03;
+        scale: 1.1;
     }
 }
 
 .linkBtn {
     padding: 5px;
-    border: 2px solid $accentBlue;
     border-radius: 10px;
-    background-color: $accentBlue;
-
-    @include themed() {
-        color: $white;
-    }
 
     font-family: $titleFont;
     font-weight: 700;
-
-
-
 }
 
 .projectFeatureList {
-    list-style-type: disc;
+    //using custom bullets
+    list-style: none;
     padding-left: 20px;
     margin: 15px 0;
 }
 
 .featureItem {
     margin: 10px;
+
+    &::before {
+        //code for bullet
+        content: "\2022";
+        font-size: 125%;
+        font-weight: bold;
+        display: inline-block;
+        width: 1rem;
+        margin-left: -1rem;
+    }
 }
 
 // PROJECT IMAGE SECTION
@@ -102,6 +128,8 @@
     overflow: hidden;
     border-radius: 10px;
     align-self: center;
+
+    filter: drop-shadow(0 0 0.75rem rgba(70, 70, 70, 0.453));
 
     position: relative;
 
@@ -121,6 +149,8 @@
     }
 }
 
+
+
 .projectOverlay {
     // Overlay format
     position: absolute;
@@ -139,9 +169,102 @@
 
 // PROJECT SPECIFIC COLORS
 .delicious {
-    background-color: $brandGreen;
+    background-color: rgb(223, 239, 158);
+
+    .projectImgContainer {
+        filter: drop-shadow(0 0 0.75rem rgb(100, 166, 4));
+    }
+
+    // stackItem
+    .projectStackItem {
+        @include themed () {
+            color: t(deliciousPink);
+        }
+    }
+
+    // bullet
+    .featureItem::before {
+        @include themed() {
+            color: t(deliciousPink);
+        }
+    }
+
+    .linkBtn {
+        @include themed() {
+            background-color: t(deliciousPink);
+        }
+    }
 }
 
 .randomQuiz {
     background-color: rgb(200, 183, 243);
+
+    .projectImgContainer {
+        filter: drop-shadow(0 0 0.75rem rgba(44, 7, 77, 0.573));
+    }
+
+
+    .linkBtn {
+        background-color: $accentBlue;
+    }
+}
+
+.stockMyFridge {
+    background-color: rgb(21, 21, 21);
+
+    .projectImgContainer {
+        filter: drop-shadow(0 0 0.75rem rgba(80, 80, 80, 0.25));
+    }
+
+    // all text
+    h3,
+    p,
+    li {
+        @include themed() {
+            color: t(stockMyFridgeWhite);
+        }
+    }
+
+    // stack items
+    .projectStackItem {
+        @include themed () {
+            color: t(stockMyFridgeGreen);
+        }
+    }
+
+    // bullets
+    .featureItem::before {
+        @include themed() {
+            color: t(stockMyFridgeGreen);
+        }
+    }
+
+    .linkBtn {
+        @include themed() {
+            background-color: t(stockMyFridgeGreen);
+            color: t(stockMyFridgeWhite);
+        }
+    }
+}
+
+.pokeJack {
+    background-color: rgb(245, 245, 250);
+
+    // stack items
+    .projectStackItem {
+        @include themed () {
+            color: t(pokeJack);
+        }
+    }
+
+    // bullet items
+    .featureItem::before {
+        color: rgb(198, 62, 78);
+    }
+
+    .linkBtn {
+        @include themed() {
+            background-color: t(pokeJack);
+        }
+    }
 }

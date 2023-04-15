@@ -9,7 +9,15 @@ $themes: (
         formText: $darkBlue,
         formHover: $accentBlue,
         formActive: $brandGreen,
-        darkLink: $accentBlue),
+        darkLink: $accentBlue,
+        // project specific
+        pokeJack: rgb(198, 62, 78),
+        stockMyFridgeWhite: rgba(239, 239, 239, 0.887),
+        stockMyFridgeGreen: rgb(125, 161, 80),
+        randomQuiz: $accentBlue,
+        deliciousPink:rgb(100, 166, 4),
+
+    ),
 
     Dark:(bgColor: $darkBlue,
         bgColorDark: $accentBlue,
@@ -19,7 +27,15 @@ $themes: (
         formText:$brandGreen,
         formHover:$accentGreen ,
         formActive:$white,
-        darkLink: $accentGreen)
+        darkLink: $accentGreen,
+        // project specific
+        pokeJack: rgb(198, 62, 78),
+        stockMyFridgeWhite: rgba(239, 239, 239, 0.887),
+        stockMyFridgeGreen: rgb(125, 161, 80),
+        randomQuiz: $accentBlue,
+        deliciousPink:rgb(100, 166, 4),
+
+    )
 );
 
 

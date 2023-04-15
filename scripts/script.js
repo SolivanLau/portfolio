@@ -26,13 +26,14 @@ window.addEventListener("load", () => {
     checkUserTheme()
     //reset contact form
     contactFrom.reset();
+
+    // build nav link per section
+    buildNav(navItems, sideNav);
+
+    //initial check for form inputs
+    inputLabelHandler()
 });
 
-// build nav link per section
-buildNav(navItems, sideNav);
-
-//initial check for form inputs
-inputLabelHandler()
 
 //**** INPUT INTERACTIONS ****
 
@@ -54,27 +55,8 @@ const avatarHairAccent = document.getElementById('hairAccent')
 
 const avatarHead = document.getElementById('head')
 
-// laptop
-const avatarLaptopDetail = document.getElementById('laptopDetail')
 
-const avatarLaptop = document.getElementById('laptop')
 
-// Body
-const avatarTorso = document.getElementById('torso')
 
-// Arms
-const avatarRArm = document.getElementById('rightArm')
-const avatarLArm = document.getElementById('leftArm')
-
-// legs
-const avatarRLeg = document.getElementById('rightLeg')
-const avatarLLeg = document.getElementById('leftLeg')
-
-// CONCEPT: after a random time period, add an animation class
-
-// 1. array of various times (in ms)
-// 2. function to choose random value from array
-// 3.
-// setTimeout()
 
 

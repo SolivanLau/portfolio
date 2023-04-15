@@ -48,7 +48,7 @@
                 </div>
                 <div class="menuContainer">
                     <!-- toggle button -->
-                    <button id="darkModeToggle" class="themeToggle">
+                    <button id="darkModeToggle" class="themeToggle" tabindex="0">
                         <div id="toggleIcon" class="toggleIcon">
                             <!-- light icon -->
                             <svg class="lightIcon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48">
@@ -60,7 +60,7 @@
                             </svg>
                         </div>
                     </button>
-                    <button id="mobileMenu" class="mobileMenu">
+                    <button id="mobileMenu" class="mobileMenu" tabindex="0">
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48">
                             <path d="M7.5 36q-.65 0-1.075-.425Q6 35.15 6 34.5q0-.65.425-1.075Q6.85 33 7.5 33h33q.65 0 1.075.425Q42 33.85 42 34.5q0 .65-.425 1.075Q41.15 36 40.5 36Zm0-10.5q-.65 0-1.075-.425Q6 24.65 6 24q0-.65.425-1.075Q6.85 22.5 7.5 22.5h33q.65 0 1.075.425Q42 23.35 42 24q0 .65-.425 1.075-.425.425-1.075.425Zm0-10.5q-.65 0-1.075-.425Q6 14.15 6 13.5q0-.65.425-1.075Q6.85 12 7.5 12h33q.65 0 1.075.425Q42 12.85 42 13.5q0 .65-.425 1.075Q41.15 15 40.5 15Z"/>
                         </svg>
@@ -85,9 +85,7 @@
                     </a>
                     <!-- title -->
                     <div class="brandText">
-                        <h1>Solivan Lau 
-                            <span class="subText">Front-end Web Developer</span>
-                        <h1>
+                        <h1>Solivan Lau <span class="subText">Frontend Developer</span></h1>
                     </div>
                 </div>
                 <!-- avatar -->
@@ -190,12 +188,12 @@
                     <h2>About Me</h2>
                     <!-- ABOUT TEXT -->
                     <div class="aboutTextContainer">
-                        <p>Hello! I am a Toronto-based developer who loves to incorporate creativity with technology. I specialize in building web applications with clean, responsive and accessible code. With languages like HTML, CSS, JavaScript, and React under my toolbelt, I've always been fascinated with expanding my skills in emerging tech to challenge the status quo - 
+                        <p>Hello! I am a Toronto-based web-developer with a passion for <span class="bold">incorporating creativity and technology</span>. I specialize in building web applications with clean, responsive and accessible code. I've always been fascinated with expanding my skillset in emerging tech; with project based experience in React, Javascript, SCSS, CSS and HTML, I strive to challenge the status quo:
                             <span class="highlight">How can I help others combine their niche with technology?</span>
                         </p>
 
-                        <p>With a background as a music educator in collaborative groups of different ages and abilities. I enjoy tackling unique and innovative projects! I have experienece teaching and communicating complex concepts, </p>
-                        <p>Aside from coding, You can find me reading up on all things coffee, film and gaming! </p>
+                        <p>With a background as a music educator in collaborative groups of different ages and abilities. I enjoy <span class="bold"> tackling unique and innovative projects!</span></p>
+                        <p>Aside from coding, You can find me reading up on all things coffee, film and gaming! </p>                        
                     </div>
                 </article>
             </div>
@@ -342,11 +340,187 @@
                 <h2>Featured Projects</h2>
                 <!-- PROJECT CARD CONTAINER -->
                 <ul class="projectCardList">
+
+                    <!-- PROJECT: PokeJack: Pokemon BlackJack-->
+                    <li class="projectCard pokeJack">
+                        <!-- PROJECT IMG -->
+                        <figure class="projectImgContainer">
+                            <a href="https://dev-pokejack.netlify.app/" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                <img src="./assets/projects/pokeJack/pokeJackMain.png" alt="Information section of Stock my Fridge App." >
+                                <div class="projectOverlay">
+                                </div>
+                            </a>
+                        </figure>
+
+                        <!-- PROJECT ARTICLE -->
+                        <article class="projectAbout">
+                            <!-- PROJECT TITLE -->
+                            <div class="projectTitle">
+                                <h3>PokeJack: Pokemon-x-Blackjack</h3>
+                                <div class="projectIcon">
+                                    <img src="./assets/projects/pokeJack/icon.png" alt="Logo of PokeJack: Pokemon-x-Blackjack app">
+                                </div>
+                            </div>
+
+                            <!-- TECH STACK -->
+                            <ul class="projectStack">
+                                <li class="projectStackItem">React</li>
+                                <li class="projectStackItem">REST API</li>
+                                <li class="projectStackItem">SCSS</li>
+                                <li class="projectStackItem">HTML5</li>
+                            </ul>
+
+                            <!-- PROJECT DESCRIPTION -->
+                            <p  class="projectDescription">A group project combining Black Jack with Pokemon - can you pokemon reach maximum evolution?
+                            </p>
+
+                            <!-- PROJECT FEATURES -->
+                            <ul class="projectFeatureList">
+                                <li class="featureItem">
+                                    Focus on DOM manipulation displaying data from local and remote databases.
+                                </li>
+                                <li class="featureItem">
+                                    Integration with Firebase Real time database to store, update and remove user local interaction.
+                                </li>
+                                <li class="featureItem">
+                                    Prioritization of future-proof code: effectively organize functions and data structures for future updates! 
+                                </li>
+                            </ul>
+                            
+                            <!-- PROJECT LINKS -->
+                            <ul class="projectLinks">
+                                <li class="projectLinkItem">
+                                    <a href="https://dev-pokejack.netlify.app/" target="_blank" rel="noopener noreferrer" tabindex="0" class="linkBtn">Live Site</a>
+                                </li>
+                                <li class="projectLinkItem">
+                                    <a href="https://github.com/Pokemon-x-Blackjack/pokemon-blackjack" target="_blank" rel="noopener noreferrer" tabindex="0" class="linkBtn">View Code</a>
+                                </li>
+
+                            </ul>
+                        </article>
+                    </li>
+                    <!-- PROJECT: Stock my Fridge App-->
+                    <li class="projectCard stockMyFridge">
+                        <!-- PROJECT IMG -->
+                        <figure class="projectImgContainer">
+                            <a href="https://slau-project-03-main.netlify.app/" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                <img src="./assets/projects/stockMyFridge/stockMyFridgeMain.png" alt="Information section of Stock my Fridge App." >
+                                <div class="projectOverlay">
+                                </div>
+                            </a>
+                        </figure>
+
+                        <!-- PROJECT ARTICLE -->
+                        <article class="projectAbout">
+                            <!-- PROJECT TITLE -->
+                            <div class="projectTitle">
+                                <h3>Stock My Fridge App</h3>
+                                <div class="projectIcon">
+                                    <img src="./assets/projects/stockMyFridge/icon.png" alt="Broccoli logo for Stock My Fridge App">
+                                </div>
+                            </div>
+
+                            <!-- TECH STACK -->
+                            <ul class="projectStack">
+                                <li class="projectStackItem">JS</li>
+                                <li class="projectStackItem">Firebase</li>
+                                <li class="projectStackItem">SCSS</li>
+                                <li class="projectStackItem">HTML5</li>
+                            </ul>
+
+                            <!-- PROJECT DESCRIPTION -->
+                            <p  class="projectDescription">A solo React project that helps users keep track of all their fridge and grocery stock!
+                            </p>
+
+                            <!-- PROJECT FEATURES -->
+                            <ul class="projectFeatureList">
+                                <li class="featureItem">
+                                    Utilizes Spoonacular API with Firebase Integration to store, update and remove user's food.
+                                </li>
+                                <li class="featureItem">
+                                    Leverages React's built-in hooks and props to conditionally render componets in a virtual DOM. 
+                                </li>
+                                <li class="featureItem">
+                                    Prioritization of future-proof code: effectively organize functions and data structures for future updates! 
+                                </li>
+                            </ul>
+                            
+                            <!-- PROJECT LINKS -->
+                            <ul class="projectLinks">
+                                <li class="projectLinkItem">
+                                    <a href="https://slau-project-03-main.netlify.app/" target="_blank" rel="noopener noreferrer" tabindex="0" class="linkBtn">Live Site</a>
+                                </li>
+                                <li class="projectLinkItem">
+                                    <a href="https://github.com/SolivanLau/solivanLauProjectThree" target="_blank" rel="noopener noreferrer" tabindex="0" class="linkBtn">View Code</a>
+                                </li>
+
+                            </ul>
+                        </article>
+                    </li>
+
+                    <!-- PROJECT: Random Quiz Game-->
+                    <li class="projectCard randomQuiz">
+                        <!-- PROJECT IMG -->
+                        <figure class="projectImgContainer">
+                            <a href="https://curious-cascaron-6f8211.netlify.app/" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                <img src="./assets/projects/randomQuiz/randomQuizMain.png" alt="Main menu section of Random Quiz application." >
+                                <div class="projectOverlay">
+                                </div>
+                            </a>
+                        </figure>
+
+                        <!-- PROJECT ARTICLE -->
+                        <article class="projectAbout">
+                            <!-- PROJECT TITLE -->
+                            <div class="projectTitle">
+                                <h3>Random Quiz Game!</h3>
+                                <div class="projectIcon">
+                                    <img src="./assets/projects/randomQuiz/icon.svg" alt="Question mark logo for Random Quiz Game">
+                                </div>
+                            </div>
+
+                            <!-- TECH STACK -->
+                            <ul class="projectStack">
+                                <li class="projectStackItem">JS</li>
+                                <li class="projectStackItem">Firebase</li>
+                                <li class="projectStackItem">SCSS</li>
+                                <li class="projectStackItem">HTML5</li>
+                            </ul>
+
+                            <!-- PROJECT DESCRIPTION -->
+                            <p  class="projectDescription">A group project building a timed multiple choice application that randomly generates questions. Try to make the leaderboard!
+                            </p>
+
+                            <!-- PROJECT FEATURES -->
+                            <ul class="projectFeatureList">
+                                <li class="featureItem">
+                                    Focus on DOM manipulation displaying data from local and remote databases.
+                                </li>
+                                <li class="featureItem">
+                                    Integration with Firebase Real time database to store, update and remove user local interaction.
+                                </li>
+                                <li class="featureItem">
+                                    Prioritization of future-proof code: effectively organize functions and data structures for future updates! 
+                                </li>
+                            </ul>
+                            
+                            <!-- PROJECT LINKS -->
+                            <ul class="projectLinks">
+                                <li class="projectLinkItem">
+                                    <a href="https://curious-cascaron-6f8211.netlify.app" target="_blank" rel="noopener noreferrer"class="linkBtn" tabindex="0">Live Site</a>
+                                </li>
+                                <li class="projectLinkItem">
+                                    <a href="https://github.com/DerekNgan/Project-2" target="_blank" rel="noopener noreferrer" tabindex="0" class="linkBtn">View Code</a>
+                                </li>
+
+                            </ul>
+                        </article>
+                    </li>
                     <!-- PROJECT: DELICIOUS -->
                     <li class="projectCard delicious">
                         <!-- PROJECT IMG -->
                         <figure class="projectImgContainer">
-                            <a href="https://delicious-project-slau.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://delicious-project-slau.netlify.app/" target="_blank" rel="noopener noreferrer" tabindex="0">
                                 <img src="./assets/projects/delicous/deliciousMain.png" alt="Delicious website main screen." >
                                 <div class="projectOverlay"></div>
                             </a>
@@ -354,7 +528,12 @@
                         <!-- PROJECT ARTICLE -->
                         <article class="projectAbout">
                             <!-- PROJECT TITLE -->
-                            <h3>Delicious</h3>
+                            <div class="projectTitle">
+                                <h3>Delicious</h3>
+                                <div class="projectIcon">
+                                    <img src="./assets/projects/delicous/icon.svg" alt="Cutlery logo for Delicious conversion project">
+                                </div>
+                            </div>
 
                             <!-- TECH STACK -->
                             <ul class="projectStack">
@@ -385,72 +564,16 @@
                             <!-- PROJECT LINKS -->
                             <ul class="projectLinks">
                                 <li class="projectLinkItem">
-                                    <a href="https://delicious-project-slau.netlify.app/" target="_blank" rel="noopener noreferrer"class="linkBtn">Live Site</a>
+                                    <a href="https://delicious-project-slau.netlify.app/" target="_blank" rel="noopener noreferrer" tabindex="0" class="linkBtn">Live Site</a>
                                 </li>
                                 <li class="projectLinkItem">
-                                    <a href="" class="linkBtn">View Code</a>
+                                    <a href="https://github.com/SolivanLau/juno-bootcamp-project-01" target="_blank" rel="noopener noreferrer" tabindex="0" class="linkBtn">View Code</a>
                                 </li>
-                                <li class="projectLinkItem">
-                                    <a href="" class="linkBtn">Project Overview</a>
-                                </li>
+
                             </ul>
                         </article>
                     </li>
-                    <!-- PROJECT: Random Quiz Game-->
-                    <li class="projectCard randomQuiz">
-                        <!-- PROJECT IMG -->
-                        <figure class="projectImgContainer">
-                            <a href="https://curious-cascaron-6f8211.netlify.app/" target="_blank" rel="noopener noreferrer">
-                                <img src="./assets/projects/randomQuiz/randomQuizMain.png" alt="Main menu section of Random Quiz application." >
-                                <div class="projectOverlay">
-                                </div>
-                            </a>
-                        </figure>
 
-                        <!-- PROJECT ARTICLE -->
-                        <article class="projectAbout">
-                            <!-- PROJECT TITLE -->
-                            <h3>Random Quiz Game!</h3>
-
-                            <!-- TECH STACK -->
-                            <ul class="projectStack">
-                                <li class="projectStackItem">JS</li>
-                                <li class="projectStackItem">Firebase</li>
-                                <li class="projectStackItem">SCSS</li>
-                                <li class="projectStackItem">HTML5</li>
-                            </ul>
-
-                            <!-- PROJECT DESCRIPTION -->
-                            <p  class="projectDescription">A group project building a timed multiple choice application that randomly generates questions. Try to make the leaderboard!
-                            </p>
-
-                            <!-- PROJECT FEATURES -->
-                            <ul class="projectFeatureList">
-                                <li class="featureItem">
-                                    Focus on DOM manipulation displaying data from local and remote databases.
-                                </li>
-                                <li class="featureItem">
-                                    Integration with Firebase Real time database to store, update and remove user local interaction.
-                                </li>
-                                <li class="featureItem">
-                                    Prioritization of future-proof code: effectively organize functions and data structures for future updates! 
-                                </li>
-                            </ul>
-                            
-                            <!-- PROJECT LINKS -->
-                            <ul class="projectLinks">
-                                <li class="projectLinkItem">
-                                    <a href="https://curious-cascaron-6f8211.netlify.app" target="_blank" rel="noopener noreferrer"class="linkBtn">Live Site</a>
-                                </li>
-                                <li class="projectLinkItem">
-                                    <a href="https://github.com/DerekNgan/Project-2" class="linkBtn">View Code</a>
-                                </li>
-                                <li class="projectLinkItem">
-                                    <a href="" class="linkBtn">Project Overview</a>
-                                </li>
-                            </ul>
-                        </article>
-                    </li>
                 </ul>
 
             </article>
@@ -477,7 +600,7 @@
                     <ul class="socialList">
                         <!-- SOCIAL LINK: LinkedIn  -->
                         <li class="socialItem">
-                            <a href="https://www.linkedin.com/in/solivanlau/" target="_blank" rel="noopener noreferrer" class="socialLink">
+                            <a href="https://www.linkedin.com/in/solivanlau/" target="_blank" rel="noopener noreferrer" tabindex="0" class="socialLink">
                                 <div class="socialContainer">
                                     <svg viewBox="0 0 128 128" class="linkedIn">
                                         <path d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"></path>
@@ -488,7 +611,7 @@
                         </li>
                         <!-- SOCIAL LINK: GitHub -->
                         <li class="socialItem">
-                            <a href="https://github.com/SolivanLau" target="_blank" rel="noopener noreferrer" class="socialLink">
+                            <a href="https://github.com/SolivanLau" target="_blank" rel="noopener noreferrer" tabindex="0" class="socialLink">
                                 <div class="socialContainer">
                                     <svg viewBox="0 0 128 128" class="gitHub">
                                         <g>
@@ -500,7 +623,7 @@
                         </li>
                         <!-- SOCIAL LINK: Email -->
                         <li class="socialItem">
-                            <a href="mailto:solivan_lau@outlook.com" target="_blank" rel="noopener noreferrer" class="socialLink">
+                            <a href="mailto:solivan_lau@outlook.com" target="_blank" rel="noopener noreferrer" tabindex="0" class="socialLink">
                                 <span class="sr-only">Send an email to Solivan at solivan_lau@outlook.com</span>
                                 <div class="socialContainer">
                                     <svg viewBox="0 0 48 48">

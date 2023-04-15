@@ -6,7 +6,7 @@ section.contact {
     background: $accentGreen;
 
     .wrapper {
-        // min-height: calc(80vh - 90px);
+        min-height: calc(80vh - 90px);
 
         display: flex;
         flex-wrap: wrap;
@@ -129,7 +129,6 @@ section.contact {
     // temp stlying
     border-radius: 8px;
     padding: 10px;
-    // background-color: $white;
 
     &.msg {
         padding-top: 24px;
@@ -149,12 +148,6 @@ section.contact {
     }
 
 
-
-    // &.msg {
-    //     min-height: 150px;
-    //     flex-grow: 1;
-    // }
-
 }
 
 .labelPlaceholder {
@@ -171,7 +164,7 @@ section.contact {
     }
 }
 
-// js class: labels to top of container
+//  labels to top of container
 .labelToTop {
     top: 5px;
     font-size: .75rem;
@@ -188,10 +181,11 @@ section.contact {
         color: t(formText);
     }
 
-    transition: 0.3s ease-in-out;
+    transition: 0.15s ease;
 
     &:hover {
         cursor: pointer;
+        scale: 1.02;
 
         @include themed() {
             color: t(formHover);
@@ -206,6 +200,3 @@ section.contact {
         }
     }
 }
-
-
-// LINK TO TOP

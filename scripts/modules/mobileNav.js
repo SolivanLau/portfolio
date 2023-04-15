@@ -2,7 +2,6 @@
 // onclick: check if navElement contains open class
 const mobileToggle = (navElement) => {
 
-
     const menuRemove = (className) => {
         navElement.classList.remove(className);
     }
