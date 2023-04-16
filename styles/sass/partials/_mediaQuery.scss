@@ -72,6 +72,7 @@
         flex-grow: 1;
     }
 
+
 }
 
 @media(max-width: 595px) {
@@ -143,6 +144,12 @@
         text-align: center;
     }
 
+
+
+
+
+
+
     // form updates
     .userInfoContainer {
         flex-direction: column;
@@ -159,12 +166,15 @@
         width: 40%;
     }
 
+
+    // CONTACT SECTION
     .contact .wrapper {
 
         flex-direction: column;
     }
 
-    // CONTACT SECTION
+
+
     // connect container
     .contactInfo,
     .contactForm {

@@ -1,17 +1,18 @@
 // nav system 
 const sectionLinkHTML = (parentElement, href) => {
-    const linkElement = document.createElement('a')
+    const linkElement = document.createElement('div')
 
-    linkElement.href = `#${href}`;
+    linkElement.classList.add('navBtn')
+    // linkElement.href = `#${href}`;
 
     linkElement.innerHTML = `
-    <div class="navBtn">
+    <a href="#${href}" tabindex="0">    
         <div class="arrowContainer">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48" width="48" height="48" class="navDown">
                 <path d="m22.7 29.25-6.45-6.45q-.9-.9-.425-2.075.475-1.175 1.775-1.175h12.9q1.2 0 1.7 1.175t-.45 2.075l-6.35 6.45q-.3.25-.65.375-.35.125-.75.125-.35 0-.7-.125t-.6-.375Z"/>
             </svg>
         </div>
-    </div>
+    </a>
     `
     parentElement.appendChild(linkElement)
 
@@ -32,7 +33,7 @@ const sideNavHTML = (parentElement, href) => {
     parentElement.appendChild(navIcon)
 }
 
-const buildNav = (sectionArr, navElement) => {
+const buildNav = (sectionArr) => {
     //icon per nav section
     // sectionArr.forEach(icon => {
     //     sideNavHTML(navElement, icon.id);

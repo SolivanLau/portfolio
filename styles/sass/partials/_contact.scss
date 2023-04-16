@@ -5,6 +5,10 @@
 section.contact {
     background: $accentGreen;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     .wrapper {
         min-height: calc(80vh - 90px);
 

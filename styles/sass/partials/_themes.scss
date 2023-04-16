@@ -5,7 +5,7 @@ $themes: (
         bgColorDark: $accentBlue,
         primeTextColor: $darkBlue,
         secText: $darkBlue,
-        darkTextColor: $darkBlue,
+
         formText: $darkBlue,
         formHover: $accentBlue,
         formActive: $brandGreen,
@@ -16,14 +16,16 @@ $themes: (
         stockMyFridgeGreen: rgb(125, 161, 80),
         randomQuiz: $accentBlue,
         deliciousPink:rgb(100, 166, 4),
-
-    ),
+        // static
+        staticWhite: $white,
+        staticDarkBlue: $darkBlue,
+        staticBrandGreen: $brandGreen ),
 
     Dark:(bgColor: $darkBlue,
         bgColorDark: $accentBlue,
         primeTextColor: $white,
         secText: $white,
-        darkTextColor:$darkBlue,
+
         formText:$brandGreen,
         formHover:$accentGreen ,
         formActive:$white,
@@ -34,8 +36,10 @@ $themes: (
         stockMyFridgeGreen: rgb(125, 161, 80),
         randomQuiz: $accentBlue,
         deliciousPink:rgb(100, 166, 4),
-
-    )
+        // static
+        staticWhite: $white,
+        staticDarkBlue: $darkBlue,
+        staticBrandGreen: $brandGreen )
 );
 
 

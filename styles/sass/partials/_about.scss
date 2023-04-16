@@ -20,7 +20,31 @@ section.about {
         row-gap: 20px;
         flex-wrap: wrap;
     }
+
 }
+
+// text stylings
+.highlightBrand {
+    color: $white;
+    text-shadow: 2px 2px 4px #0000006d;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+
+// icon interactions
+.aboutIcon {
+    display: inline-block;
+}
+
+.handWave {
+    margin-left: 10px;
+    animation: rotate .5s infinite alternate ease-in-out;
+    animation-play-state: paused;
+}
+
 
 .aboutImg {
     width: 35%;
@@ -37,11 +61,18 @@ section.about {
 .aboutTextContainer {
     display: flex;
     flex-direction: column;
+
 }
 
 .aboutMe {
     width: 60%;
     min-width: 550px;
+
+    &:hover {
+        .handWave {
+            animation-play-state: running;
+        }
+    }
 }
 
 .aboutTextContainer {
@@ -50,23 +81,8 @@ section.about {
 
     // typographic edits 
     p {
-        font-size: $bodyFontSize;
+        font-size: 1.2rem;
         line-height: 1.5;
     }
 
-    .highlight {
-        display: inline-block;
-        margin: 10px 0;
-        font-family: $titleFont;
-        font-size: $lgBodyFontSz;
-        font-weight: 700;
-
-        background-color: $darkBlue;
-        padding: 10px;
-        border-radius: 10px;
-
-        @include themed() {
-            color: $brandGreen;
-        }
-    }
 }

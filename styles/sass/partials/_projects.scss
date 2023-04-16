@@ -29,7 +29,7 @@
     p,
     li {
         @include themed() {
-            color: t(darkTextColor);
+            color: t(staticDarkBlue);
         }
     }
 }
@@ -40,7 +40,7 @@
 .projectTitle {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 
@@ -94,6 +94,10 @@
 
     font-family: $titleFont;
     font-weight: 700;
+
+    @include themed() {
+        color: t(staticWhite);
+    }
 }
 
 .projectFeatureList {
@@ -199,6 +203,11 @@
 .randomQuiz {
     background-color: rgb(200, 183, 243);
 
+
+    .projectIcon {
+        animation: rotate .6s infinite alternate ease;
+    }
+
     .projectImgContainer {
         filter: drop-shadow(0 0 0.75rem rgba(44, 7, 77, 0.573));
     }
@@ -249,6 +258,11 @@
 
 .pokeJack {
     background-color: rgb(245, 245, 250);
+
+    // project animation
+    .projectIcon {
+        animation: wiggle 1.5s infinite;
+    }
 
     // stack items
     .projectStackItem {
