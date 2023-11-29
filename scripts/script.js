@@ -1,62 +1,47 @@
-import mobileToggle from './modules/mobileNav.js';
-import inputLabelHandler from './modules/input.js';
-import buildNav from './modules/nav.js';
-import { checkUserTheme, handleToggleDarkMode } from './modules/darkMode.js'
-
+import mobileToggle from "./modules/mobileNav.js";
+import inputLabelHandler from "./modules/input.js";
+import buildNav from "./modules/nav.js";
+import { checkUserTheme, handleToggleDarkMode } from "./modules/darkMode.js";
 
 // HTML VARIABLES
 
 // mobile nav
-const hamburgerMenu = document.getElementById('mobileMenu')
-const headerNav = document.getElementById('linkContainer')
+const hamburgerMenu = document.getElementById("mobileMenu");
+const headerNav = document.getElementById("linkContainer");
 
 // nav per section
-const navItems = document.querySelectorAll('.navItem');
-const sideNav = document.getElementById('sideNav');
+const navItems = document.querySelectorAll(".navItem");
+// console.log(navItems);
+const sideNav = document.getElementById("sideNav");
 // darkmode
-const darkModeBtn = document.getElementById('darkModeToggle')
-const contactFrom = document.getElementById('contactForm')
-
+const darkModeBtn = document.getElementById("darkModeToggle");
+const contactFrom = document.getElementById("contactForm");
 
 //**** PAGE LOAD SET UP ****
 
 // dark/light mode theme
 window.addEventListener("load", () => {
-    // onload USER theme preference check
-    checkUserTheme()
-    //reset contact form
-    contactFrom.reset();
+  // onload USER theme preference check
+  checkUserTheme();
+  //reset contact form
+  contactFrom.reset();
 
-    // build nav link per section
-    buildNav(navItems, sideNav);
+  // build nav link per section
+  buildNav(navItems, sideNav);
 
-    //initial check for form inputs
-    inputLabelHandler()
+  //initial check for form inputs
+  inputLabelHandler();
 });
-
 
 //**** INPUT INTERACTIONS ****
 
 // mobile hamburger menu
-hamburgerMenu.addEventListener('click', () => { mobileToggle(headerNav) })
+hamburgerMenu.addEventListener("click", () => {
+  mobileToggle(headerNav);
+});
 
 // darkMode Toggle
-darkModeBtn.addEventListener('click', handleToggleDarkMode)
+darkModeBtn.addEventListener("click", handleToggleDarkMode);
 
 // input/label system
-document.addEventListener('click', inputLabelHandler)
-
-
-
-
-// HTML VARIABLES AVATAR RIG 
-// head
-const avatarHairAccent = document.getElementById('hairAccent')
-
-const avatarHead = document.getElementById('head')
-
-
-
-
-
-
+document.addEventListener("click", inputLabelHandler);
