@@ -204,3 +204,41 @@ section.contact {
         }
     }
 }
+
+
+// MEDIA QUERIES
+// custom 595px
+@include responsive-style(595){
+    // form updates
+    .userInfoContainer {
+        flex-direction: column;
+    }
+}
+
+// mobile 400px
+@include responsive-style(mobile){
+
+    // CONTACT SECTION
+    .contact .wrapper {
+
+        flex-direction: column;
+    }
+
+    // connect container
+    .contactInfo,
+    .contactForm {
+        width: 100%;
+    }
+
+    .contactInfo {
+        min-width: auto;
+    }
+
+    .socialContainer {
+        width: 40px;
+    }
+
+    .socialHandle {
+        font-size: 0.85rem;
+    }
+}

@@ -1,6 +1,6 @@
 @use '../../abstracts' as *;
 
-
+// ABOUT SECTION
 section.about {
     background-color: $accentBlue;
 
@@ -32,7 +32,6 @@ section.about {
 .bold {
     font-weight: 700;
 }
-
 
 // icon interactions
 .aboutIcon {
@@ -84,5 +83,25 @@ section.about {
         font-size: 1.2rem;
         line-height: 1.5;
     }
+}
 
+
+// MEDIA QUERIES
+
+@include responsive-style(795){
+    .aboutTextContainer {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+
+    .aboutMe {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .aboutImg {
+        min-width: 300px;
+    }
 }

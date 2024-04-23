@@ -1,7 +1,5 @@
 @use '../../abstracts' as *;
 
-
-
 .projectCardList {
     display: flex;
     flex-direction: column;
@@ -282,4 +280,46 @@
             background-color: t(pokeJack);
         }
     }
+}
+
+
+
+// MEDIA QUERIES
+
+@include responsive-style(795){
+    .projectCard {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .projectAbout,
+    .projectImgContainer {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .projectLinks {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .projectLinkItem {
+
+        flex-grow: 1;
+    }
+}
+
+
+@include responsive-style(mobile){
+    .projectStack {
+        justify-content: center;
+    }
+
+    .projectStackItem {
+        width: 40%;
+        text-align: center;
+    }
+
 }

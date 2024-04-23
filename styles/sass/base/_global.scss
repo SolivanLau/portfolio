@@ -47,11 +47,6 @@ textarea {
     padding: 0;
 }
 
-.wrapper {
-    max-width: 1440px;
-    width: 85%;
-    margin: 0 auto;
-}
 
 // TYPOGRAPHIC ELEMENTS
 h1,
@@ -117,7 +112,6 @@ section {
     @include themed() {
         background-color: t(bgColor);
     }
-
     width: 100%;
     // links dynamic nav arrow to end of each section
     // bg border divider
@@ -127,7 +121,7 @@ section {
 }
 
 
-section .wrapper {
+section .fixedWrapper {
     min-height: 100vh;
     padding: 45px 0 90px 0;
     z-index: 10;

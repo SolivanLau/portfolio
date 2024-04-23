@@ -1,14 +1,10 @@
 @use '../../abstracts' as *;
 
 
-
-
-header {
-    .wrapper {
-        height: calc(100% - 90px);
-        display: flex;
-        flex-direction: column;
-    }
+header .fixedWrapper {
+    height: calc(100% - 90px);
+    display: flex;
+    flex-direction: column;
 }
 
 // NAV BAR 
@@ -69,7 +65,7 @@ header {
     display: block;
 }
 
-// themeToggle Button
+// TOGGLE THEME BUTTON
 .themeToggle {
     width: 75px;
     height: 40px;
@@ -124,7 +120,7 @@ header {
 
 }
 
-// Mobile Menu
+// MOBILE MENU
 .menuContainer {
     display: flex;
     align-items: center;
@@ -206,6 +202,10 @@ header {
     }
 }
 
+
+
+
+
 .brandText {
     h1 {
         font-size: $headingFontSize;
@@ -222,7 +222,6 @@ header {
 
 
 // AVATAR SECTION
-
 .avatarContainer {
     background-image: url('../assets/icons/bgBlob.svg');
     background-position: center;
@@ -235,15 +234,6 @@ header {
 
     svg {
         height: 100%;
-    }
-
-    &:hover {
-        // #head {
-        //     rotate: -8deg;
-        //     translate: -10px 0px;
-        // }
-
-        // #hairAccent {}
     }
 }
 
@@ -283,4 +273,118 @@ header {
     transform-box: fill-box;
     transform: translateX(-2px) translateY(6px);
     animation: 1.7s rotate infinite alternate;
+}
+
+
+
+// HEADER MEDIA QUERIES
+// custom device width 795px
+@include responsive-style(795){
+        // HEADER ADJUSTMENT
+        .heroSection {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+    
+        .brandBanner,
+        .avatarContainer {
+            width: 100%;
+        }
+    
+        .brandBanner{
+            flex-grow: 0;
+            margin-bottom: 20px;
+        }
+        .brandText {
+            h1 {
+                font-size: $subHeadingFontSize;
+            }
+    
+            .subText {
+                font-size: $lgBodyFontSz;
+            }
+        }
+    
+        .brandLogo {
+            width: 100px;
+        }
+}
+
+// custom device width 595px
+@include responsive-style(595){
+        // MOBILE MENU
+        .navBar {
+            justify-content: flex-end;
+            position: relative;
+        }
+    
+        .mobileMenu {
+            display: block;
+        }
+    
+        .brandLogo {
+            display: none;
+        }
+    
+        .linkContainer {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0px;
+            width: 200px;
+            border-radius: 10px;
+            transition: 0.3 ease-in-out;
+            opacity: 0;
+    
+            @include themed () {
+                background-color: t(bgColorDark);
+            }
+    
+            &.openMobileNav {
+                display: block;
+                animation: menuOpen 0.2s .1s forwards;
+            }
+    
+            &.removeMobileNav {
+                animation: menuGone 0.2s forwards;
+            }
+        }
+    
+    
+        .linkList {
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 20px;
+            text-align: right;
+        }
+    
+        .linkItem {
+    
+            &:hover,
+            :focus-visible {
+                rotate: 6deg;
+    
+            }
+        }
+    
+        // heroSection
+        .subText {
+            text-align: center;
+        }    
+}
+
+@include responsive-style(380){
+    .brandText {
+        text-align: center;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .subText {
+            font-size: 1rem;
+        }
+    }
 }

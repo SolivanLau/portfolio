@@ -1,0 +1,38 @@
+// Media Query Mixin
+@mixin responsive-style($breakpoint) {
+    @if $breakpoint == tablet {
+      @media only screen and (max-width: 795px) {
+        @content;
+      }
+    }
+    @else if $breakpoint == mobile {
+      @media only screen and (max-width: 400px) {
+        @content;
+      }
+    }
+    @else {
+      $custom-width: $breakpoint + px; 
+      @media only screen and (max-width: $custom-width) {
+        @content;
+      }
+    }
+  }
+
+// global wrapper
+.wrapper {
+    max-width: 1440px;
+    width: 85%;
+    margin: 0 auto;
+}
+// sr only class
+.sr-only { 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    margin: -1px;
+    border: 0; 
+    padding: 0; 
+    white-space: nowrap; 
+    clip-path: inset(100%); 
+    clip: rect(0 0 0 0); 
+    overflow: hidden;}

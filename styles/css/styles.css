@@ -199,19 +199,6 @@ template {
   display: none;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 @keyframes levitate {
   from {
     transform: translateY(0px);
@@ -359,6 +346,25 @@ template {
     top: -30px;
   }
 }
+.wrapper {
+  max-width: 1440px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -402,12 +408,6 @@ textarea {
   height: 100%;
   width: 100%;
   padding: 0;
-}
-
-.wrapper {
-  max-width: 1440px;
-  width: 85%;
-  margin: 0 auto;
 }
 
 h1,
@@ -495,7 +495,7 @@ section {
   background-color: #373849;
 }
 
-section .wrapper {
+section .fixedWrapper {
   min-height: 100vh;
   padding: 45px 0 90px 0;
   z-index: 10;
@@ -582,144 +582,7 @@ footer {
   color: #e7e8e7;
 }
 
-@media (max-width: 795px) {
-  .heroSection {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-  .brandBanner,
-  .avatarContainer {
-    width: 100%;
-  }
-  .brandText h1 {
-    font-size: 2.618rem;
-  }
-  .brandText .subText {
-    font-size: 1.2rem;
-  }
-  .brandLogo {
-    width: 100px;
-  }
-  .aboutTextContainer {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-  .aboutMe {
-    width: 100%;
-    min-width: auto;
-  }
-  .aboutImg {
-    min-width: 300px;
-  }
-  .projectCard {
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-  .projectAbout,
-  .projectImgContainer {
-    width: 100%;
-    min-width: auto;
-  }
-  .projectLinks {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  .projectLinkItem {
-    flex-grow: 1;
-  }
-}
-@media (max-width: 595px) {
-  .navBar {
-    justify-content: flex-end;
-    position: relative;
-  }
-  .mobileMenu {
-    display: block;
-  }
-  .brandLogo {
-    display: none;
-  }
-  .linkContainer {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 0px;
-    width: 200px;
-    border-radius: 10px;
-    transition: 0.3 ease-in-out;
-    opacity: 0;
-  }
-  .themeLight .linkContainer {
-    background-color: #8c99aa;
-  }
-  .themeDark .linkContainer {
-    background-color: #8c99aa;
-  }
-  .linkContainer.openMobileNav {
-    display: block;
-    animation: menuOpen 0.2s 0.1s forwards;
-  }
-  .linkContainer.removeMobileNav {
-    animation: menuGone 0.2s forwards;
-  }
-  .linkList {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 20px;
-    text-align: right;
-  }
-  .linkItem:hover,
-  .linkItem :focus-visible {
-    rotate: 6deg;
-  }
-  .subText {
-    text-align: center;
-  }
-  .userInfoContainer {
-    flex-direction: column;
-  }
-}
-@media (max-width: 400px) {
-  .projectStack {
-    justify-content: center;
-  }
-  .projectStackItem {
-    width: 40%;
-  }
-  .contact .wrapper {
-    flex-direction: column;
-  }
-  .contactInfo,
-  .contactForm {
-    width: 100%;
-  }
-  .contactInfo {
-    min-width: auto;
-  }
-  .socialContainer {
-    width: 40px;
-  }
-  .socialHandle {
-    font-size: 0.85rem;
-  }
-}
-@media (max-width: 380px) {
-  .brandText {
-    text-align: center;
-  }
-  .brandText h1 {
-    font-size: 2rem;
-  }
-  .brandText .subText {
-    font-size: 1rem;
-  }
-}
-header .wrapper {
+header .fixedWrapper {
   height: calc(100% - 90px);
   display: flex;
   flex-direction: column;
@@ -912,6 +775,7 @@ header .wrapper {
 .avatarContainer svg {
   height: 100%;
 }
+
 #head {
   transform-origin: center;
   transform-box: fill-box;
@@ -944,6 +808,90 @@ header .wrapper {
   animation: 1.7s rotate infinite alternate;
 }
 
+@media only screen and (max-width: 795px) {
+  .heroSection {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .brandBanner,
+  .avatarContainer {
+    width: 100%;
+  }
+  .brandBanner {
+    flex-grow: 0;
+    margin-bottom: 20px;
+  }
+  .brandText h1 {
+    font-size: 2.618rem;
+  }
+  .brandText .subText {
+    font-size: 1.2rem;
+  }
+  .brandLogo {
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .navBar {
+    justify-content: flex-end;
+    position: relative;
+  }
+  .mobileMenu {
+    display: block;
+  }
+  .brandLogo {
+    display: none;
+  }
+  .linkContainer {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 200px;
+    border-radius: 10px;
+    transition: 0.3 ease-in-out;
+    opacity: 0;
+  }
+  .themeLight .linkContainer {
+    background-color: #8c99aa;
+  }
+  .themeDark .linkContainer {
+    background-color: #8c99aa;
+  }
+  .linkContainer.openMobileNav {
+    display: block;
+    animation: menuOpen 0.2s 0.1s forwards;
+  }
+  .linkContainer.removeMobileNav {
+    animation: menuGone 0.2s forwards;
+  }
+  .linkList {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+    text-align: right;
+  }
+  .linkItem:hover,
+  .linkItem :focus-visible {
+    rotate: 6deg;
+  }
+  .subText {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .brandText {
+    text-align: center;
+  }
+  .brandText h1 {
+    font-size: 2rem;
+  }
+  .brandText .subText {
+    font-size: 1rem;
+  }
+}
 section.about {
   background-color: #8c99aa;
 }
@@ -1016,6 +964,20 @@ section.about .wrapper {
   line-height: 1.5;
 }
 
+@media only screen and (max-width: 795px) {
+  .aboutTextContainer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .aboutMe {
+    width: 100%;
+    min-width: auto;
+  }
+  .aboutImg {
+    min-width: 300px;
+  }
+}
 .techStack {
   width: 100%;
   display: flex;
@@ -1311,6 +1273,35 @@ section.about .wrapper {
   background-color: rgb(198, 62, 78);
 }
 
+@media only screen and (max-width: 795px) {
+  .projectCard {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .projectAbout,
+  .projectImgContainer {
+    width: 100%;
+    min-width: auto;
+  }
+  .projectLinks {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .projectLinkItem {
+    flex-grow: 1;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .projectStack {
+    justify-content: center;
+  }
+  .projectStackItem {
+    width: 40%;
+    text-align: center;
+  }
+}
 section.contact {
   background: #37b45d;
   display: flex;
@@ -1494,4 +1485,28 @@ section.contact .navBtn {
 .themeDark .contactSubmit:active {
   color: #e7e8e7;
   border: 2px solid #e7e8e7;
+}
+
+@media only screen and (max-width: 595px) {
+  .userInfoContainer {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .contact .wrapper {
+    flex-direction: column;
+  }
+  .contactInfo,
+  .contactForm {
+    width: 100%;
+  }
+  .contactInfo {
+    min-width: auto;
+  }
+  .socialContainer {
+    width: 40px;
+  }
+  .socialHandle {
+    font-size: 0.85rem;
+  }
 }
