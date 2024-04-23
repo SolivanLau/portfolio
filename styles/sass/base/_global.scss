@@ -1,10 +1,13 @@
-@use './variables' as *;
-@use './themes' as *;
+@use '../abstracts' as *;
 
+// BORDER BOX
+html { box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+// GLOBAL FONT SIZING 
 html {
-    // 1 rem =  20px standard!
-    font-size: 125%;
-    // scroll animation
+    font-size: 125%; // 1 rem =  20px standard!
     scroll-behavior: smooth;
     font-family: $baseFont;
 }

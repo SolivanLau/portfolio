@@ -1,5 +1,6 @@
-@use './variables' as *;
-@use './themes' as *;
+@use '../../abstracts' as *;
+
+
 
 .projectCardList {
     display: flex;

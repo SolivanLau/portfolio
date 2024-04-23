@@ -1,16 +1,3 @@
-// general format and style
-@use './partials/setup';
-@use './partials/variables' as *;
-@use './partials/themes' as *;
-@use './partials/global';
-// @use './partials/underConstruction';
-
-// specific section
-@use './partials/header';
-@use './partials/about';
-@use './partials/skills';
-@use './partials/projects';
-@use './partials/contact';
-
-// media queries
-@use './partials//mediaQuery';
+@use "./abstracts";
+@use "./base";
+@use "./pages";

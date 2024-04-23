@@ -1,5 +1,5 @@
-@use './variables' as *;
-@use './themes' as *;
+@use '../abstracts' as *;
+
 
 @media(max-width: 795px) {
 
@@ -144,12 +144,6 @@
         text-align: center;
     }
 
-
-
-
-
-
-
     // form updates
     .userInfoContainer {
         flex-direction: column;
@@ -172,8 +166,6 @@
 
         flex-direction: column;
     }
-
-
 
     // connect container
     .contactInfo,
