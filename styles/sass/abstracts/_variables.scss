@@ -1,21 +1,60 @@
-// Fonts
-$titleFont: 'Montserrat', sans-serif;
-$baseFont: 'Hind', sans-serif;
-// colors
-$white: #e7e8e7;
-$accentGreen: #37b45d;
-$brandGreen: #81c687;
-$accentBlue: #8c99aa;
-$darkBlue: #373849;
+// Variables
+:root{
+    /* Fonts */
+    --titleFont: 'Montserrat', sans-serif;
+    --baseFont: 'Hind', sans-serif;
+    
+    /* Colors */
+    --white: #e7e8e7;
+    --accentGreen: #37b45d;
+    --brandGreen: #81c687;
+    --accentBlue: #8c99aa;
+    --darkBlue: #373849;
+    
+    /* Font Sizes */
+    --headingFontSize: 4.236rem;
+    --subHeadingFontSize: 2.618rem;
+    --lgBodyFontSz: 1.2rem;
+    --bodyFontSize: 1rem;  
 
-// fontSizes
-$headingFontSize: 4.236rem;
+/* Light Theme */
+  --bgColor: var(--white);
+  --bgColorDark: var(--accentBlue);
+  --primeTextColor: var(--darkBlue);
+  --secText: var(--darkBlue);
+  --formText: var(--darkBlue);
+  --formHover: var(--accentBlue);
+  --formActive: var(--brandGreen);
+  --darkLink: var(--accentBlue);
+  --pokeJack: rgb(198, 62, 78);
+  --stockMyFridgeWhite: rgba(239, 239, 239, 0.887);
+  --stockMyFridgeGreen: rgb(125, 161, 80);
+  --randomQuiz: var(--accentBlue);
+  --deliciousPink: rgb(100, 166, 4);
+  --staticWhite: var(--white);
+  --staticDarkBlue: var(--darkBlue);
+  --staticBrandGreen: var(--brandGreen);
+  --staticRed: rgb(255, 133, 127);
+  --staticYellow: rgb(253, 219, 81); 
+  --staticBlack: #3d3d3d;
+}
 
-$subHeadingFontSize: 2.618rem;
-$lgBodyFontSz: 1.2rem;
-$bodyFontSize: 1rem;
+.themeDark {
+    /* Dark Theme */
+    --bgColor: var(--darkBlue);
+    --bgColorDark: var(--accentBlue);
+    --primeTextColor: var(--white);
+    --secText: var(--white);
+    --formText: var(--brandGreen);
+    --formHover: var(--accentGreen);
+    --formActive: var(--white);
+    --darkLink: var(--accentGreen);
+}
+  
 
-// animations section
+  
+
+// ANIMATIONS
 @keyframes levitate {
     from {
         transform: translateY(0px);

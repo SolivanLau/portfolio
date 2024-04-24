@@ -2,13 +2,11 @@
 
 // ABOUT SECTION
 section.about {
-    background-color: $accentBlue;
+    background-color: var(--accentBlue);
 
     h2,
     p {
-        @include themed() {
-            color: $darkBlue;
-        }
+        color: var(--darkBlue);
     }
 
     .wrapper {
@@ -25,7 +23,7 @@ section.about {
 
 // text stylings
 .highlightBrand {
-    color: $white;
+    color: var(--white);
     text-shadow: 2px 2px 4px #0000006d;
 }
 

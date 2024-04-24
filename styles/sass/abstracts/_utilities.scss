@@ -24,8 +24,13 @@
     width: 85%;
     margin: 0 auto;
 }
-// sr only class
-.sr-only { 
+
+// forced height 
+.fullHeight {
+  min-height: 100vh;
+}
+// sr only
+.srOnly { 
     position: absolute; 
     width: 1px; 
     height: 1px; 

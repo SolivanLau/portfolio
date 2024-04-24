@@ -54,9 +54,7 @@ header .fixedWrapper {
 
 
         a {
-            @include themed() {
-                color: $brandGreen;
-            }
+            color: var(--brandGreen);
         }
     }
 }
@@ -107,7 +105,7 @@ header .fixedWrapper {
 
         .darkIcon {
             opacity: 1;
-            fill: $brandGreen;
+            fill: var(--brandGreen);
         }
     }
 
@@ -132,12 +130,10 @@ header .fixedWrapper {
     aspect-ratio: 1 / 1;
     padding: 5px;
     border-radius: 50%;
-    background-color: $brandGreen;
+    background-color: var(--brandGreen);
 
     svg {
-        @include themed() {
-            fill: t(primeTextColor);
-        }
+        fill: var(--primeTextColor);
 
         height: 100%;
     }
@@ -149,11 +145,7 @@ header .fixedWrapper {
     &:focus-visible {
 
         cursor: pointer;
-
-        @include themed() {
-            background-color: $accentGreen;
-        }
-
+        background-color: var(--accentGreen);
     }
 
     display: none;
@@ -193,13 +185,11 @@ header .fixedWrapper {
 }
 
 .slLogo {
-    fill: $brandGreen;
+    fill: var(--brandGreen);
 }
 
 .slLogoSm {
-    @include themed() {
-        fill: t(primeTextColor);
-    }
+    fill: var(--primeTextColor);
 }
 
 
@@ -208,7 +198,7 @@ header .fixedWrapper {
 
 .brandText {
     h1 {
-        font-size: $headingFontSize;
+        font-size: var(--headingFontSize);
         text-align: ceter;
     }
 
@@ -216,8 +206,8 @@ header .fixedWrapper {
 }
 
 .subText {
-    font-size: $subHeadingFontSize;
-    font-family: $baseFont;
+    font-size: var(--subHeadingFontSize);
+    font-family: var(--baseFont);
 }
 
 
@@ -298,11 +288,11 @@ header .fixedWrapper {
         }
         .brandText {
             h1 {
-                font-size: $subHeadingFontSize;
+                font-size: var(--subHeadingFontSize);
             }
     
             .subText {
-                font-size: $lgBodyFontSz;
+                font-size: var(--lgBodyFontSz);
             }
         }
     
@@ -336,10 +326,8 @@ header .fixedWrapper {
             border-radius: 10px;
             transition: 0.3 ease-in-out;
             opacity: 0;
-    
-            @include themed () {
-                background-color: t(bgColorDark);
-            }
+            background-color: var(--bgColorDark);
+            z-index: 20;
     
             &.openMobileNav {
                 display: block;

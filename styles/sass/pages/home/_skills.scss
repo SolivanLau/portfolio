@@ -62,15 +62,13 @@
     padding: 10px;
     text-align: center;
     border-radius: 8px;
-    background-color: $brandGreen;
+    background-color: var(--brandGreen);
     opacity: 0;
     // animation
     transition: 0.2s ease;
 
 
     p {
-        @include themed() {
-            color: t(staticWhite);
-        }
+        color: var(--staticWhite);
     }
 }

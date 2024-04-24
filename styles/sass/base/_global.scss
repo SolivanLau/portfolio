@@ -9,7 +9,14 @@ html { box-sizing: border-box;}
 html {
     font-size: 125%; // 1 rem =  20px standard!
     scroll-behavior: smooth;
-    font-family: $baseFont;
+    font-family: var(--baseFont);
+    
+}
+
+body{
+    transition-property: color, background-color;
+    transition: 0.4s ease;
+    background-color: var(--bgColor);
 }
 
 // STRIP STYLES
@@ -24,13 +31,14 @@ a {
     text-decoration: none;
 
     &:focus-visible {
-        outline: solid 2px $brandGreen;
+        outline: solid 2px var(--brandGreen);
     }
 }
 
 button {
     border: none;
     padding: 10px;
+    cursor: pointer;
 }
 
 // FORM ELEMENTS
@@ -59,10 +67,7 @@ p,
 a {
     margin: 0;
     padding: 0;
-
-    @include themed() {
-        color: t(primeTextColor);
-    }
+    color: var(--primeTextColor);
 }
 
 h1,
@@ -71,12 +76,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $titleFont;
+    font-family: var(--titleFont);
 }
 
 h2 {
     margin-bottom: 50px;
-    font-size: $subHeadingFontSize;
+    font-size: var(--subHeadingFontSize);
 }
 
 
@@ -99,24 +104,15 @@ figure {
 }
 
 // NAVIGATION SECTION STYLES
-header {
-    height: 100vh;
-}
 
-section {
-    min-height: 100vh;
-}
 
 header,
 section {
-    @include themed() {
-        background-color: t(bgColor);
-    }
     width: 100%;
     // links dynamic nav arrow to end of each section
     // bg border divider
     position: relative;
-    //dark mode tranisition
+    //dark mode transition
     transition: 0.3s ease-in-out;
 }
 
@@ -141,17 +137,15 @@ section .fixedWrapper {
     }
 
     .toAbout {
-        fill: $accentBlue;
+        fill: var(--accentBlue);
     }
 
     .toContact {
-        fill: $accentGreen;
+        fill: var(--accentGreen);
     }
 
     .toSkill {
-        @include themed() {
-            fill: t(bgColor);
-        }
+        fill: var(--bgColor);
     }
 }
 
@@ -174,11 +168,11 @@ section .fixedWrapper {
         }
 
         .navDown {
-            fill: $accentGreen;
+            fill: var(--accentGreen);
         }
 
         .navToTop {
-            fill: $brandGreen;
+            fill: var(--brandGreen);
         }
     }
 }
@@ -193,18 +187,18 @@ section .fixedWrapper {
     align-items: center;
 
     svg {
-        fill: $brandGreen;
+        fill: var(--brandGreen);
         transition: 0.3s ease;
         animation: levitate 1s ease-in-out infinite alternate;
     }
 
     .navDown {
-        fill: $brandGreen;
+        fill: var(--brandGreen);
     }
 
     .navToTop {
         rotate: 180deg;
-        fill: $darkBlue;
+        fill: var(--darkBlue);
     }
 }
 
@@ -214,9 +208,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @include themed() {
-        background-color: t(bgColor);
-        color: t(primeTextColor);
-    }
+    background-color: var(--bgColor);
+    color: var(--primeTextColor);
 }

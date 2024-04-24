@@ -27,9 +27,8 @@
     h3,
     p,
     li {
-        @include themed() {
-            color: t(staticDarkBlue);
-        }
+        color: var(--staticDarkBlue);
+
     }
 }
 
@@ -91,12 +90,9 @@
     padding: 5px;
     border-radius: 10px;
 
-    font-family: $titleFont;
+    font-family: var(--titleFont);
     font-weight: 700;
-
-    @include themed() {
-        color: t(staticWhite);
-    }
+    color: var(--staticWhite);
 }
 
 .projectFeatureList {
@@ -180,22 +176,16 @@
 
     // stackItem
     .projectStackItem {
-        @include themed () {
-            color: t(deliciousPink);
-        }
+        color: var(--deliciousPink);
     }
 
     // bullet
     .featureItem::before {
-        @include themed() {
-            color: t(deliciousPink);
-        }
+        color: var(--deliciousPink);
     }
 
     .linkBtn {
-        @include themed() {
-            background-color: t(deliciousPink);
-        }
+        background-color: var(--deliciousPink);
     }
 }
 
@@ -213,7 +203,7 @@
 
 
     .linkBtn {
-        background-color: $accentBlue;
+        background-color: var(--accentBlue);
     }
 }
 
@@ -228,30 +218,23 @@
     h3,
     p,
     li {
-        @include themed() {
-            color: t(stockMyFridgeWhite);
-        }
+
+        color: var(--stockMyFridgeWhite);
     }
 
     // stack items
     .projectStackItem {
-        @include themed () {
-            color: t(stockMyFridgeGreen);
-        }
+        color: var(--stockMyFridgeGreen);
     }
 
     // bullets
     .featureItem::before {
-        @include themed() {
-            color: t(stockMyFridgeGreen);
-        }
+        color: var(--stockMyFridgeGreen);
     }
 
     .linkBtn {
-        @include themed() {
-            background-color: t(stockMyFridgeGreen);
-            color: t(stockMyFridgeWhite);
-        }
+        background-color: var(--stockMyFridgeGreen);
+        color: var(--stockMyFridgeWhite);
     }
 }
 
@@ -265,9 +248,7 @@
 
     // stack items
     .projectStackItem {
-        @include themed () {
-            color: t(pokeJack);
-        }
+        color: var(--pokeJack);
     }
 
     // bullet items
@@ -276,9 +257,7 @@
     }
 
     .linkBtn {
-        @include themed() {
-            background-color: t(pokeJack);
-        }
+        background-color: var(--pokeJack);
     }
 }
 
@@ -306,7 +285,6 @@
     }
 
     .projectLinkItem {
-
         flex-grow: 1;
     }
 }
