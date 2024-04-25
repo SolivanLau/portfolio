@@ -1423,22 +1423,29 @@ header .wrapper {
   display: flex;
 }
 
+.emailProjectContainer {
+  margin-bottom: 40px;
+}
 .emailProjectContainer .btnContainer {
   display: flex;
   justify-content: center;
   gap: 40px;
 }
-.emailProjectContainer button {
-  border-radius: 15px;
-  transition-property: background-color, scale, color;
-  transition: 0.4s ease;
+.emailProjectContainer button, .emailProjectContainer a {
+  background-color: var(--primeTextColor);
+  color: var(--bgColor);
+  border-radius: 10px;
+  transition: all 0.4s ease;
 }
-.emailProjectContainer button:hover, .emailProjectContainer button:focus-visible {
+.emailProjectContainer button:hover, .emailProjectContainer button:focus-visible, .emailProjectContainer a:hover, .emailProjectContainer a:focus-visible {
   background-color: var(--brandGreen);
   scale: 120%;
 }
-.emailProjectContainer button:active {
+.emailProjectContainer button:active, .emailProjectContainer a:active {
   background-color: var(--accentGreen);
+}
+.emailProjectContainer a {
+  padding: 10px;
 }
 
 .emailProject {
@@ -1450,8 +1457,7 @@ header .wrapper {
   z-index: 30;
   width: 100%;
   height: 75vh;
-  transition-property: width, height;
-  transition: 1.4s ease-in-out;
+  transition: 0.8s ease-in-out;
 }
 .emailProject .decal {
   border-radius: 50vw;
@@ -1524,7 +1530,7 @@ header .wrapper {
   transform-origin: 40px 40px;
   animation: loadSpin 1.2s linear infinite;
 }
-.loadingSpinner div :after {
+.loadingSpinner div:after {
   content: " ";
   display: block;
   position: absolute;

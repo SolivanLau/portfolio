@@ -10,32 +10,35 @@ const headerNav = document.getElementById("linkContainer");
 // darkmode
 const darkModeBtn = document.getElementById("darkModeToggle");
 
-// iframe
+// iframe project
 const loadingScreen = document.getElementById("loading");
 const projectContainer = document.getElementById("projectContainer");
 const projectIframe = document.getElementById("projectIframe");
+const projectLink = document.getElementById("projectLink");
+const projectRepo = document.getElementById("projectRepo");
 const iframeBtns = Array.from(document.getElementsByClassName("projectBtn"));
 
-//**** PAGE LOAD SET UP ****
-
+//**** PAGE LOAD ****
 window.addEventListener("load", () => {
 	// onload USER theme preference check
 	checkUserTheme();
 	// email project iframe
 	const url = window.location.search;
 	const query = new URLSearchParams(url).get("email");
-	projectIframe.src = `https://slau-email-${query}.netlify.app/`;
+
+	if (query) {
+		projectIframe.src = `https://slau-email-${query}.netlify.app/`;
+		projectLink.href = `https://slau-email-${query}.netlify.app/`;
+	}
 });
 
+// iframe load
 projectIframe.addEventListener("load", () => {
 	loadingScreen.classList.add("loaded");
-
 	setTimeout(() => {
 		loadingScreen.classList.add("interactive");
 	}, 400);
 });
-
-//**** INPUT INTERACTIONS ****
 
 // mobile hamburger menu
 hamburgerMenu.addEventListener("click", () => {
