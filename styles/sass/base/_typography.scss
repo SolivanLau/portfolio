@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+
+// GLOBAL FONT SIZING
+body{
+    font-size: 125%; // 1 rem =  20px standard!
+    font-family: var(--baseFont);
+}
+
+// HEADINGS
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    color: var(--primeTextColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--titleFont);
+}
+
+h2 {
+    margin-bottom: 50px;
+    font-size: var(--subHeadingFontSize);
+}
+
+p{
+    font-size: 1.2rem;
+}

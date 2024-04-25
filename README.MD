@@ -27,12 +27,12 @@ SCSS organization is loosely adapting Kitty Giraudel's SCSS architecture from [S
 
 As a general overview:
 
--  `sass/abstracts` folder contains normalize, variables and utilities (mixins and global classes).
--  `sass/base` folder contains global styles (global styles, utility classes, typography)
--  `sass/pages` folder contains sub-folders dedicated to each page, home and email, each having partials for each major section of the page.
--  media queries are dealt with in their respective partial - section by section.
+-  `sass/abstracts` contains normalize, variables and utilities (mixins and global classes).
+-  `sass/base` contains global styles.
+-  `sass/pages` contains sub-folders dedicated to each page, home and email, each having partials for each major section of the page.
+-  media queries are coded within their respective partial - section by section using the responsive style mix-in.
 
-Each partial folder has an `index.scss` file forwarding all partials to be used in the main `styles.scss`
+Each partial folder has an `index.scss` file forwarding all partials to be used in the main `styles.scss`.
 
 ## JS Structure
 

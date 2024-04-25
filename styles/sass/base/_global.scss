@@ -5,17 +5,12 @@ html { box-sizing: border-box;}
 
 *, *:before, *:after {box-sizing: inherit}
 
-// GLOBAL FONT SIZING 
 html {
-    font-size: 125%; // 1 rem =  20px standard!
     scroll-behavior: smooth;
-    font-family: var(--baseFont);
-    
 }
 
 body{
-    transition-property: color, background-color;
-    transition: 0.4s ease;
+    transition: color 0.4s ease, background-color 0.4s ease ;
     background-color: var(--bgColor);
 }
 
@@ -55,36 +50,6 @@ textarea {
     padding: 0;
 }
 
-
-// TYPOGRAPHIC ELEMENTS
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a {
-    margin: 0;
-    padding: 0;
-    color: var(--primeTextColor);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--titleFont);
-}
-
-h2 {
-    margin-bottom: 50px;
-    font-size: var(--subHeadingFontSize);
-}
-
-
 // IMG/SVG CONTAINERS
 img {
     display: block;
@@ -104,8 +69,6 @@ figure {
 }
 
 // NAVIGATION SECTION STYLES
-
-
 header,
 section {
     width: 100%;
@@ -208,6 +171,5 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bgColor);
     color: var(--primeTextColor);
 }

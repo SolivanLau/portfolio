@@ -1,7 +1,7 @@
 @use '../../abstracts' as *;
 
 // ABOUT SECTION
-section.about {
+.about {
     background-color: var(--accentBlue);
 
     h2,
@@ -9,6 +9,10 @@ section.about {
         color: var(--darkBlue);
     }
 
+    p{
+        font-size: 1.5rem;
+        letter-spacing: 1.7;
+    }
     .wrapper {
         display: flex;
         flex-direction: row;
@@ -58,7 +62,6 @@ section.about {
 .aboutTextContainer {
     display: flex;
     flex-direction: column;
-
 }
 
 .aboutMe {
@@ -75,12 +78,6 @@ section.about {
 .aboutTextContainer {
     flex-grow: 1;
     gap: 15px;
-
-    // typographic edits 
-    p {
-        font-size: 1.2rem;
-        line-height: 1.5;
-    }
 }
 
 
