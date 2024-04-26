@@ -858,7 +858,7 @@ header .fixedWrapper {
     transition: 0.3 ease-in-out;
     opacity: 0;
     background-color: var(--bgColorDark);
-    z-index: 20;
+    z-index: 90;
   }
   .linkContainer.openMobileNav {
     display: block;
@@ -1528,6 +1528,9 @@ header .wrapper {
   justify-content: center;
   gap: 40px;
 }
+.emailProjectContainer .btnContainer.mobile {
+  display: none;
+}
 .emailProjectContainer button, .emailProjectContainer a {
   background-color: var(--primeTextColor);
   color: var(--bgColor);
@@ -1551,7 +1554,7 @@ header .wrapper {
   border-radius: 15px;
   background-color: var(--primeTextColor);
   position: relative;
-  z-index: 30;
+  z-index: 10;
   width: 100%;
   height: 75vh;
   transition: 0.8s ease-in-out;
@@ -1715,10 +1718,41 @@ header .wrapper {
   }
 }
 @media only screen and (max-width: 400px) {
+  .fixedNav {
+    position: fixed;
+    top: 0;
+    z-index: 90;
+  }
+  .emailProjectContainer {
+    margin-top: 100px;
+  }
   .emailProjectContainer .btnContainer {
     gap: 20px;
+    font-size: var(--bodyFontSize);
+  }
+  .emailProjectContainer .btnContainer.desktop {
+    display: none;
+  }
+  .emailProjectContainer .btnContainer.mobile {
+    display: block;
+  }
+  .emailProjectContainer .wrapper {
+    width: 100%;
+  }
+  .emailProject {
+    padding: 0;
+    height: 73vh;
   }
   .emailProject.mobile {
     width: 100%;
+  }
+  .loadingScreen {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .decal {
+    display: none;
   }
 }

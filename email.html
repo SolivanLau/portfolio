@@ -10,7 +10,7 @@
 
 <body>
     <!-- HEADER -->
-    <header id="top">
+    <header class="fixedNav">
         <div class="wrapper">
             <!-- nav bar -->
             <nav class="navBar">
@@ -78,9 +78,16 @@
         <div class="wrapper">
             <!-- VIEW BUTTONS -->
             <section>
-                <div class="btnContainer">
+                <div class="btnContainer desktop">
                     <button class="projectBtn">Desktop</button>
                     <button class="projectBtn">Mobile</button>
+                </div>
+                <div class="btnContainer mobile">
+                    <div class="btnContainer">
+                        <a id="projectLink" href="" target="_blank" rel="noopener noreferrer">View in
+                            Browser</a>
+                        <a href="./index.html#projects">More Projects</a>
+                    </div>
                 </div>
             </section>
 
@@ -110,11 +117,10 @@
 
                 <!-- PROJECT IFRAME -->
                 <iframe id="projectIframe" src="" width="100%" height="100%" frameborder="0"></iframe>
-
             </section>
 
             <section>
-                <div class="btnContainer">
+                <div class="btnContainer desktop">
                     <a id="projectLink" href="" target="_blank" rel="noopener noreferrer">View in
                         Browser</a>
                     <a href="./index.html#projects">More Projects</a>

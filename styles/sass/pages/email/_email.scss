@@ -12,6 +12,11 @@ header .wrapper{
         display: flex;
         justify-content: center;
         gap: 40px;
+
+        // mobile btnContainer
+        &.mobile{
+          display: none;
+        }
     }
 
     // BUTTONS AND LINKS
@@ -42,7 +47,7 @@ header .wrapper{
     border-radius: 15px;
     background-color: var(--primeTextColor);
     position: relative;
-    z-index: 30;
+    z-index: 10;
     width: 100%;
     height: 75vh;
     transition:  .8s ease-in-out;
@@ -231,13 +236,53 @@ header .wrapper{
 }
 // 400px
 @include responsive-style(mobile){
-    .emailProjectContainer{
-        .btnContainer{
-            gap: 20px;
-        }
+  
+    .fixedNav{
+      position: fixed;
+      top: 0;
+      z-index: 90;
     }
 
-    .emailProject.mobile{
-        width: 100%;
+    // FAUX DEVICE REMOVED
+    .emailProjectContainer{
+      margin-top: 100px;
+
+      .btnContainer{
+        gap: 20px;
+        font-size: var(--bodyFontSize);
+
+        &.desktop{
+          display: none;
+        }
+        &.mobile{
+          display: block;
+        }
+      }
+
+
+
+      .wrapper{
+          width: 100%;
+      }
     }
+      
+    .emailProject{
+        padding: 0;
+        height: 73vh;
+
+        &.mobile{
+          width: 100%;
+        }
+    }
+      
+    .loadingScreen{
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .decal{
+      display: none;
+    }
+
 }

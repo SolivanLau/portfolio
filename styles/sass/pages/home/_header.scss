@@ -327,7 +327,7 @@ header .fixedWrapper {
             transition: 0.3 ease-in-out;
             opacity: 0;
             background-color: var(--bgColorDark);
-            z-index: 20;
+            z-index: 90;
     
             &.openMobileNav {
                 display: block;
