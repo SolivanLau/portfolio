@@ -1711,7 +1711,7 @@ header .wrapper {
     width: 100%;
   }
   .emailProject {
-    width: 100%;
+    width: 95%;
     height: 600px;
   }
   .emailProject .decalOne, .emailProject .decalTwo {
@@ -1745,15 +1745,15 @@ header .wrapper {
   .emailProjectContainer .btnContainer.mobile {
     display: flex;
   }
+  .decal {
+    display: none;
+  }
   .emailProject {
     padding: 0;
     height: 75vh;
   }
   .emailProject.mobile {
     width: 100%;
-  }
-  .decal {
-    display: none;
   }
   .loadingScreen {
     top: 0;
