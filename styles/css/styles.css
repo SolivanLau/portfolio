@@ -226,7 +226,7 @@ template {
   --darkLink: var(--accentBlue);
   --pokeJack: rgb(198, 62, 78);
   --stockMyFridgeWhite: rgba(239, 239, 239, 0.887);
-  --stockMyFridgeGreen: rgb(125, 161, 80);
+  --stockMyFridgeGreen: rgb(64, 141, 9);
   --randomQuiz: var(--accentBlue);
   --deliciousPink: rgb(100, 166, 4);
   --staticWhite: var(--white);
@@ -975,6 +975,11 @@ header .fixedWrapper {
     min-width: 300px;
   }
 }
+@media only screen and (max-width: 400px) {
+  .about h2 {
+    text-align: center;
+  }
+}
 .techStack {
   width: 100%;
   display: flex;
@@ -1039,13 +1044,15 @@ header .fixedWrapper {
 
 .emailProjectList {
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .emailProjectList .card {
   background-color: var(--primeTextColor);
   text-align: center;
   border-radius: 10px;
-  width: 25%;
+  width: calc(25% - 20px);
   padding: 40px 10px;
 }
 .emailProjectList .imgContainer {
@@ -1065,7 +1072,7 @@ header .fixedWrapper {
 }
 .emailProjectList img {
   position: relative;
-  height: 400px;
+  height: 350px;
   object-fit: cover;
   object-position: top;
   transition: rotate 0.4s ease, scale 0.4s ease;
@@ -1239,6 +1246,7 @@ header .fixedWrapper {
 }
 .delicious .linkBtn {
   background-color: var(--deliciousPink);
+  color: #FFFFFF;
 }
 
 .randomQuiz {
@@ -1252,6 +1260,7 @@ header .fixedWrapper {
 }
 .randomQuiz .linkBtn {
   background-color: var(--accentBlue);
+  color: #FFFFFF;
 }
 
 .stockMyFridge {
@@ -1273,7 +1282,7 @@ header .fixedWrapper {
 }
 .stockMyFridge .linkBtn {
   background-color: var(--stockMyFridgeGreen);
-  color: var(--stockMyFridgeWhite);
+  color: #FFFFFF;
 }
 
 .pokeJack {
@@ -1290,8 +1299,19 @@ header .fixedWrapper {
 }
 .pokeJack .linkBtn {
   background-color: var(--pokeJack);
+  color: #FFFFFF;
 }
 
+@media only screen and (max-width: 1430px) {
+  .emailProjectList {
+    justify-content: center;
+    gap: 40px 20px;
+  }
+  .emailProjectList .card {
+    width: calc(50% - 20px);
+    max-width: 400px;
+  }
+}
 @media only screen and (max-width: 795px) {
   .projectCard {
     flex-direction: column;
@@ -1310,6 +1330,12 @@ header .fixedWrapper {
   }
   .projectLinkItem {
     flex-grow: 1;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .emailProjectList .card {
+    width: 100%;
+    max-width: none;
   }
 }
 @media only screen and (max-width: 400px) {
