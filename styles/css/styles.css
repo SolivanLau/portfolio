@@ -904,6 +904,9 @@ header .fixedWrapper {
   font-size: 1.5rem;
   letter-spacing: 1.7;
 }
+.about a:hover {
+  text-decoration: underline var(--white) 2px;
+}
 .about .wrapper {
   display: flex;
   flex-direction: row;
