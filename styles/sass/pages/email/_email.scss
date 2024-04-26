@@ -12,6 +12,10 @@ header .wrapper{
         display: flex;
         justify-content: center;
         gap: 40px;
+
+        &.mobile{
+          display: none;
+        }
     }
 
     // BUTTONS AND LINKS
@@ -21,7 +25,7 @@ header .wrapper{
       border-radius: 10px;
       transition: all 0.4s ease;
 
-      &:hover, &:focus-visible{
+      &:hover{
         background-color: var(--brandGreen);
         scale: 120%;
       }
@@ -208,6 +212,11 @@ header .wrapper{
 // MEDIA QUERIES
 // custom 600px
 @include responsive-style(600){
+    .emailProjectContainer{
+      .wrapper{
+        width: 100%;
+    }
+    }
     .emailProject{
         width: 100%;
         height: 600px;
@@ -226,6 +235,14 @@ header .wrapper{
         .decalThree{
             opacity: 0;
         }
+
+        &.desktop{
+          width: 95%;
+        }
+
+        &.mobile{
+          width: 70%;
+        }
     }
 
 }
@@ -242,16 +259,17 @@ header .wrapper{
         &.desktop{
           display: none;
         }
+
+        &.mobile{
+          display: flex;
+        }
       }
-      .wrapper{
-          width: 100%;
-      }
+
     }
 
     .emailProject{
-      margin-top: 0;
         padding: 0;
-        height: 73vh;
+        height: 75vh;
 
         &.mobile{
           width: 100%;
