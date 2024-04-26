@@ -14,8 +14,8 @@ const darkModeBtn = document.getElementById("darkModeToggle");
 const loadingScreen = document.getElementById("loading");
 const projectContainer = document.getElementById("projectContainer");
 const projectIframe = document.getElementById("projectIframe");
-const projectLink = document.getElementById("projectLink");
-const projectRepo = document.getElementById("projectRepo");
+const projectLinkMobile = document.getElementById("projectLinkMobile");
+const projectLinkDesktop = document.getElementById("projectLinkDesktop");
 const iframeBtns = Array.from(document.getElementsByClassName("projectBtn"));
 
 //**** PAGE LOAD ****
@@ -28,7 +28,8 @@ window.addEventListener("load", () => {
 
 	if (query) {
 		projectIframe.src = `https://slau-email-${query}.netlify.app/`;
-		projectLink.href = `https://slau-email-${query}.netlify.app/`;
+		projectLinkMobile.href = `https://slau-email-${query}.netlify.app/`;
+		projectLinkDesktop.href = `https://slau-email-${query}.netlify.app/`;
 	}
 });
 
