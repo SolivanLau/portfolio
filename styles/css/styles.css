@@ -209,6 +209,7 @@ template {
   --brandGreen: #81c687;
   --accentBlue: #8c99aa;
   --darkBlue: #373849;
+  --overlay: #3d3d3d7b;
   /* Font Sizes */
   --headingFontSize: 4.236rem;
   --subHeadingFontSize: 2.618rem;
@@ -1032,6 +1033,67 @@ header .fixedWrapper {
   color: var(--staticWhite);
 }
 
+.projects article {
+  margin-bottom: 80px;
+}
+
+.emailProjectList {
+  display: flex;
+  gap: 40px;
+}
+.emailProjectList .card {
+  background-color: var(--primeTextColor);
+  text-align: center;
+  border-radius: 10px;
+  width: 25%;
+  padding: 40px 10px;
+}
+.emailProjectList .imgContainer {
+  position: relative;
+  overflow: hidden;
+}
+.emailProjectList .imgContainer::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.emailProjectList img {
+  position: relative;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+  transition: rotate 0.4s ease, scale 0.4s ease;
+}
+.emailProjectList .text {
+  padding: 20px 0 0;
+}
+.emailProjectList h3, .emailProjectList p, .emailProjectList a {
+  color: var(--bgColor);
+  transition: color 0.4s ease;
+}
+.emailProjectList h3 {
+  margin-bottom: 15px;
+}
+.emailProjectList a:hover {
+  color: var(--accentGreen);
+}
+.emailProjectList .imgContainer:hover img {
+  scale: 1.1;
+  rotate: 3deg;
+}
+.emailProjectList .imgContainer:hover::after {
+  opacity: 1;
+}
+.emailProjectList a:hover + .text a, .emailProjectList a:hover + .text p {
+  color: var(--accentGreen);
+}
+
 .projectCardList {
   display: flex;
   flex-direction: column;
@@ -1458,7 +1520,7 @@ header .wrapper {
 }
 
 .emailProject {
-  margin: 40px auto;
+  margin: 20px auto;
   padding: 60px 10px;
   border-radius: 15px;
   background-color: var(--primeTextColor);
