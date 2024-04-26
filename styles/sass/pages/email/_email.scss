@@ -12,11 +12,6 @@ header .wrapper{
         display: flex;
         justify-content: center;
         gap: 40px;
-
-        // mobile btnContainer
-        &.mobile{
-          display: none;
-        }
     }
 
     // BUTTONS AND LINKS
@@ -54,24 +49,24 @@ header .wrapper{
 
     // DEVICE DECALS
     .decal{
-        border-radius: 50vw;
-        border: 2px solid var(--bgColor);
-        width: 15px;
-        height: 15px;
-        position: absolute;
-        top: 25px;
-        transform: translate(-50%, -50%);
-        transition: all ease-in-out 0.7s;
+      position: absolute;
+      top: 25px;
+      width: 15px;
+      height: 15px;
+      transform: translate(-50%, -50%);
+      border-radius: 50vw;
+      border: 2px solid var(--bgColor);
+      transition: all ease-in-out 0.7s;
     }
 
     .decalOne{
-        left: 20px;
-        background-color: var(--staticRed);
+      left: 20px;
+      background-color: var(--staticRed);
     }
 
     .decalTwo{
-        left: 45px;
-        background-color: var(--staticYellow);
+      left: 45px;
+      background-color: var(--staticYellow);
     }
 
     .decalThree{
@@ -236,17 +231,10 @@ header .wrapper{
 }
 // 400px
 @include responsive-style(mobile){
-  
-    .fixedNav{
-      position: fixed;
-      top: 0;
-      z-index: 90;
-    }
+
 
     // FAUX DEVICE REMOVED
     .emailProjectContainer{
-      margin-top: 100px;
-
       .btnContainer{
         gap: 20px;
         font-size: var(--bodyFontSize);
@@ -254,19 +242,14 @@ header .wrapper{
         &.desktop{
           display: none;
         }
-        &.mobile{
-          display: block;
-        }
       }
-
-
-
       .wrapper{
           width: 100%;
       }
     }
-      
+
     .emailProject{
+      margin-top: 0;
         padding: 0;
         height: 73vh;
 
@@ -274,15 +257,16 @@ header .wrapper{
           width: 100%;
         }
     }
-      
+    
+    .decal{
+      display: none;
+    }
     .loadingScreen{
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
     }
-    .decal{
-      display: none;
-    }
+    
 
 }
