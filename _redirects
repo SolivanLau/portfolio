@@ -2,8 +2,8 @@
 
 # email pages
 
-/email /#projects
-/email/stockshots /email?email=4
-/email/qwikbite /email?email=3
-/email/td /email?email=2
-/email/terra /email?email=1
+/email /#projects 200
+/email/stockshots /email?email=4 200
+/email/qwikbite /email?email=3 200
+/email/td /email?email=2 200
+/email/terra /email?email=1 200
