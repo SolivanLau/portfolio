@@ -269,7 +269,7 @@ header .fixedWrapper {
 
 // HEADER MEDIA QUERIES
 // custom device width 795px
-@include responsive-style(795){
+@include responsiveStyle(795){
         // HEADER ADJUSTMENT
         .heroSection {
             flex-direction: column;
@@ -302,7 +302,7 @@ header .fixedWrapper {
 }
 
 // custom device width 595px
-@include responsive-style(595){
+@include responsiveStyle(595){
         // MOBILE MENU
         .navBar {
             justify-content: flex-end;
@@ -363,7 +363,7 @@ header .fixedWrapper {
         }    
 }
 
-@include responsive-style(380){
+@include responsiveStyle(380){
     .brandText {
         text-align: center;
 

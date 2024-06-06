@@ -1,5 +1,5 @@
 // Media Query Mixin
-@mixin responsive-style($breakpoint) {
+@mixin responsiveStyle($breakpoint) {
     @if $breakpoint == tablet {
       @media only screen and (max-width: 795px) {
         @content;

@@ -1,0 +1,9 @@
+# Netlify Redirects
+
+# email pages
+
+https://solivanlau.com/email https://solivanlau.com/#projects
+https://solivanlau.com/email/stockshots https://solivanlau.com/email?email=4
+https://solivanlau.com/email/qwikbite https://solivanlau.com/email?email=3
+https://solivanlau.com/email/td https://solivanlau.com/email?email=2
+https://solivanlau.com/email/terra https://solivanlau.com/email?email=1

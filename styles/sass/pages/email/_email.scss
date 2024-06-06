@@ -211,7 +211,7 @@ header .wrapper{
 
 // MEDIA QUERIES
 // custom 600px
-@include responsive-style(600){
+@include responsiveStyle(600){
     .emailProjectContainer{
       .wrapper{
         width: 100%;
@@ -247,7 +247,7 @@ header .wrapper{
 
 }
 // 400px
-@include responsive-style(mobile){
+@include responsiveStyle(mobile){
   // REMOVE VIEW BUTTONS CHANGE CTA POSITION 
   .emailProjectContainer{
     .btnContainer{

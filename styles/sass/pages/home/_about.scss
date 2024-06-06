@@ -79,7 +79,7 @@
 
 // MEDIA QUERIES
 
-@include responsive-style(795){
+@include responsiveStyle(795){
     .aboutTextContainer {
         flex-direction: column;
         flex-wrap: nowrap;
@@ -97,7 +97,7 @@
     }
 }
 
-@include responsive-style(mobile){
+@include responsiveStyle(mobile){
     .about h2{
         text-align: center;
     }

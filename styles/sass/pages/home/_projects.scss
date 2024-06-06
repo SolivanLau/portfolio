@@ -332,7 +332,7 @@
 // MEDIA QUERIES
 
 
-@include responsive-style(1430){
+@include responsiveStyle(1430){
     
     .emailProjectList {
         justify-content: center;
@@ -344,7 +344,7 @@
     }
 }
 
-@include responsive-style(795){
+@include responsiveStyle(795){
     .projectCard {
         flex-direction: column;
         flex-wrap: nowrap;
@@ -368,7 +368,7 @@
     }
 }
 
-@include responsive-style(700){
+@include responsiveStyle(700){
     .emailProjectList {
         .card{
             width: 100%;
@@ -377,7 +377,7 @@
     }
 
 }
-@include responsive-style(mobile){
+@include responsiveStyle(mobile){
     .projectStack {
         justify-content: center;
     }
