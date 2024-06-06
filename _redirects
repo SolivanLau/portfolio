@@ -2,7 +2,6 @@
 
 # email pages
 
-/email /#projects 200
 /email/stockshots /email?email=4 200
 /email/qwikbite /email?email=3 200
 /email/td /email?email=2 200
