@@ -1,8 +1,5 @@
 # Netlify Redirects
 
 # email pages
+/email /index.html#projects 200
 
-/email/stockshots /email.html?email=4 200
-/email/qwikbite /email.html?email=3 200
-/email/td /email.html?email=2 200
-/email/terra /email.html?email=1 200
