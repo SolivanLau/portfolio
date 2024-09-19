@@ -4,7 +4,6 @@
 // GENERAL SECTION FORMAT
 section.contact {
     background: var(--accentGreen);
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -40,9 +39,12 @@ section.contact {
     display: flex;
     flex-direction: column;
     gap: 30px;
-
+    
     h2 {
         margin: 0;
+    }
+    h2,p{
+        color: var(--darkBlue);
     }
 }
 

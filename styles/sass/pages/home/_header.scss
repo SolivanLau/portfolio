@@ -209,14 +209,16 @@ header .fixedWrapper {
         margin-block: 20px;
         a{
             padding: 3px 20px;
-            border: 2px solid var(--accentGreen);
+            border: 3px solid var(--accentGreen);
             background-color: var(--accentGreen);
+            color: var(--staticBlack);
             border-radius: 10px;
             font-weight: 700;
 
         }
         p:nth-of-type(2) a {
             background-color: transparent;
+            color: var(--accentGreen);
         }
     }
 

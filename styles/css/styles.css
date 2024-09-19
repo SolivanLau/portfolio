@@ -228,7 +228,7 @@ template {
   --stockMyFridgeWhite: rgba(239, 239, 239, 0.887);
   --stockMyFridgeGreen: rgb(64, 141, 9);
   --randomQuiz: var(--accentBlue);
-  --deliciousPink: rgb(100, 166, 4);
+  --deliciousPink: rgb(64, 99, 12);
   --staticWhite: var(--white);
   --staticDarkBlue: var(--darkBlue);
   --staticBrandGreen: var(--brandGreen);
@@ -783,13 +783,15 @@ header .fixedWrapper {
 }
 .brandText .cta a {
   padding: 3px 20px;
-  border: 2px solid var(--accentGreen);
+  border: 3px solid var(--accentGreen);
   background-color: var(--accentGreen);
+  color: var(--staticBlack);
   border-radius: 10px;
   font-weight: 700;
 }
 .brandText .cta p:nth-of-type(2) a {
   background-color: transparent;
+  color: var(--accentGreen);
 }
 
 .subText {
@@ -1033,6 +1035,14 @@ header .fixedWrapper {
 .techName {
   margin-top: 10px;
   text-align: center;
+}
+
+.wordpress svg {
+  fill: var(--darkBlue);
+}
+
+.themeDark .wordpress svg {
+  fill: var(--white);
 }
 
 @media only screen and (max-width: 795px) {
@@ -1280,7 +1290,7 @@ header .fixedWrapper {
   filter: drop-shadow(0 0 0.75rem rgba(44, 7, 77, 0.573));
 }
 .randomQuiz .linkBtn {
-  background-color: var(--accentBlue);
+  background-color: var(--darkBlue);
   color: #FFFFFF;
 }
 
@@ -1403,6 +1413,9 @@ section.contact .navBtn {
 }
 .connectContainer h2 {
   margin: 0;
+}
+.connectContainer h2, .connectContainer p {
+  color: var(--darkBlue);
 }
 
 .socialList {

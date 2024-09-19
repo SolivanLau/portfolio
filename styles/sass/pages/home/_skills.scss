@@ -21,7 +21,20 @@
     text-align: center;
 }
 
+
+// ICONS 
+.wordpress svg{
+    fill: var(--darkBlue);
+}
+
+.themeDark{
+    .wordpress svg{
+        fill: var(--white);
+    }
+}
 // MEDIA QUERIES
+
+
 
 @include responsiveStyle(tablet){
     .techStack{
