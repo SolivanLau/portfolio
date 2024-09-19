@@ -39,7 +39,7 @@
     }
 }
 
-@include responsiveStyle(579){
+@include responsiveStyle(630){
     .techStack{
         grid-template-columns: repeat(3, 1fr);
         gap:20px 5px ;

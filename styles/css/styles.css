@@ -607,6 +607,7 @@ h4,
 h5,
 h6 {
   font-family: var(--titleFont);
+  text-wrap: balance;
 }
 
 h2 {
@@ -775,6 +776,21 @@ header .fixedWrapper {
   font-size: var(--headingFontSize);
   text-align: ceter;
 }
+.brandText .cta {
+  display: flex;
+  gap: 32px;
+  margin-block: 20px;
+}
+.brandText .cta a {
+  padding: 3px 20px;
+  border: 2px solid var(--accentGreen);
+  background-color: var(--accentGreen);
+  border-radius: 10px;
+  font-weight: 700;
+}
+.brandText .cta p:nth-of-type(2) a {
+  background-color: transparent;
+}
 
 .subText {
   font-size: var(--subHeadingFontSize);
@@ -844,7 +860,7 @@ header .fixedWrapper {
   .brandText h1 {
     font-size: var(--subHeadingFontSize);
   }
-  .brandText .subText {
+  .brandText .subText, .brandText p {
     font-size: var(--lgBodyFontSz);
   }
   .brandLogo {
@@ -892,8 +908,12 @@ header .fixedWrapper {
   .linkItem :focus-visible {
     rotate: 6deg;
   }
-  .subText {
+  .brandText {
     text-align: center;
+  }
+  .brandText .cta {
+    justify-content: center;
+    margin-block: 28px;
   }
 }
 @media only screen and (max-width: 380px) {
@@ -989,7 +1009,7 @@ header .fixedWrapper {
     margin-bottom: 20px;
   }
   .about p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 .techStack {
@@ -1024,7 +1044,7 @@ header .fixedWrapper {
     margin-top: 0px;
   }
 }
-@media only screen and (max-width: 579px) {
+@media only screen and (max-width: 630px) {
   .techStack {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px 5px;
@@ -1183,7 +1203,7 @@ header .fixedWrapper {
 }
 
 .featureItem {
-  margin: 10px;
+  margin: 10px 0;
 }
 .featureItem::before {
   content: "•";
@@ -1321,13 +1341,14 @@ header .fixedWrapper {
     min-width: auto;
   }
   .projectLinks {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
     gap: 20px;
   }
-  .projectLinkItem {
-    flex-grow: 1;
+  .projectLinks a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
   }
 }
 @media only screen and (max-width: 700px) {

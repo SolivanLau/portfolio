@@ -203,6 +203,23 @@ header .fixedWrapper {
     }
 
 
+    .cta{
+        display: flex;
+        gap: 32px;
+        margin-block: 20px;
+        a{
+            padding: 3px 20px;
+            border: 2px solid var(--accentGreen);
+            background-color: var(--accentGreen);
+            border-radius: 10px;
+            font-weight: 700;
+
+        }
+        p:nth-of-type(2) a {
+            background-color: transparent;
+        }
+    }
+
 }
 
 .subText {
@@ -291,9 +308,10 @@ header .fixedWrapper {
                 font-size: var(--subHeadingFontSize);
             }
     
-            .subText {
+            .subText, p {
                 font-size: var(--lgBodyFontSz);
             }
+
         }
     
         .brandLogo {
@@ -358,9 +376,15 @@ header .fixedWrapper {
         }
     
         // heroSection
-        .subText {
+        .brandText {
             text-align: center;
-        }    
+        
+            .cta{
+                justify-content: center;
+                margin-block:28px;
+            }
+        }
+         
 }
 
 @include responsiveStyle(380){

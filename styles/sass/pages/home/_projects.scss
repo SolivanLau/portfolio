@@ -179,7 +179,7 @@
 }
 
 .featureItem {
-    margin: 10px;
+    margin: 10px 0;
 
     &::before {
         //code for bullet
@@ -357,15 +357,17 @@
     }
 
     .projectLinks {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        display: grid;
         gap: 20px;
+
+        a{
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 12px 0 ;
+        }
     }
 
-    .projectLinkItem {
-        flex-grow: 1;
-    }
 }
 
 @include responsiveStyle(700){
