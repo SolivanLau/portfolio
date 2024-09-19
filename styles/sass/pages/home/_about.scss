@@ -13,9 +13,13 @@
         font-size: 1.5rem;
         letter-spacing: 1.7;
     }
+
+    .highlightBrand{
+        color: var(--white);
+        text-shadow: 3px 3px 6px var(--overlay);
+    }
     a{
         color: var(--staticDarkBlue);
-        text-decoration: underline;
     }
     .wrapper {
         display: flex;

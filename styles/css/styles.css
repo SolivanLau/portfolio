@@ -943,9 +943,12 @@ header .fixedWrapper {
   font-size: 1.5rem;
   letter-spacing: 1.7;
 }
+.about .highlightBrand {
+  color: var(--white);
+  text-shadow: 3px 3px 6px var(--overlay);
+}
 .about a {
   color: var(--staticDarkBlue);
-  text-decoration: underline;
 }
 .about .wrapper {
   display: flex;
