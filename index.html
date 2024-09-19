@@ -917,34 +917,34 @@
         </article>
 
         <!-- CONTACT FORM -->
-        <form action="https://formspree.io/f/xdovdvjv" method="POST" id="contactForm" class="contactForm">
+        <form name="contact" method="POST" data-netlify="true" id="contactForm" class="contactForm">
           <div class="userInfoContainer">
             <!-- NAME INPUT -->
             <!-- label container -->
-            <label id="nameContainer" for="nameInput" class="inputContainer" aria-hidden="true">
+            <label id="nameContainer" for="name" class="inputContainer" aria-hidden="true">
               <!-- input -->
-              <input type="text" name="nameInput" id="nameInput" class="inputChild" required />
+              <input type="text" name="name" id="nameInput" class="inputChild" required />
               <!-- label text -->
-              <label id="nameLabel" for="nameInput" class="labelPlaceholder">Name</label>
+              <label id="nameLabel" for="name" class="labelPlaceholder">Name</label>
             </label>
 
             <!-- EMAIL INPUT -->
             <!-- label container -->
-            <label id="emailContainer" for="emailInput" class="inputContainer" aria-hidden="true">
+            <label id="emailContainer" for="email" class="inputContainer" aria-hidden="true">
               <!-- input -->
-              <input type="email" name="emailInput" id="emailInput" class="inputChild" required />
+              <input type="email" name="email" id="emailInput" class="inputChild" required />
               <!-- label text -->
-              <label id="emailLabel" for="emailInput" class="labelPlaceholder">Email</label>
+              <label id="emailLabel" for="email" class="labelPlaceholder">Email</label>
             </label>
           </div>
 
           <!-- MSG INPUT -->
           <!-- label container -->
-          <label id="msgContainer" for="emailInput" class="inputContainer msg" aria-hidden="true">
+          <label id="msgContainer" for="message" class="inputContainer msg" aria-hidden="true">
             <!-- input -->
-            <textarea name="msgInput" id="msgInput" class="inputChild msg" required></textarea>
+            <textarea name="message" id="msgInput" class="inputChild msg" required></textarea>
             <!-- label text -->
-            <label id="msgLabel" for="msgInput" class="labelPlaceholder">Let's Talk!</label>
+            <label id="msgLabel" for="message" class="labelPlaceholder">Let's Talk!</label>
           </label>
           <button class="contactSubmit">Send!</button>
         </form>

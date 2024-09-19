@@ -11,14 +11,6 @@
 // input: need to know if the active element on page is input
 // label: moving from placeholder area to 
 
-
-// name input vars
-// const inputNameContainer = document.getElementById('nameContainer')
-
-// const inputName = document.getElementById('nameInput')
-
-// const labelName = document.getElementById('nameLabel')
-
 const inputChildren = document.querySelectorAll('.inputChild')
 
 
