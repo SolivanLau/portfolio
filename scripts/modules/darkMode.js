@@ -29,10 +29,8 @@ const applyTheme = () => {
 // checking preference on load
 export const checkUserTheme = () => {
     if (userThemePreference.matches === true) {
-        // console.log(`${userThemePreference.matches}, set toggle button to dark mode`)
         darkModeStatus = true;
     } else {
-        // console.log(`${userThemePreference.matches}, set toggle button to light mode`)
         darkModeStatus = false;
     }
     applyTheme()
@@ -40,7 +38,6 @@ export const checkUserTheme = () => {
 
 export const handleToggleDarkMode = () => {
     darkModeStatus = !darkModeStatus;
-    // console.log(`darkModeStatus is currently ${darkModeStatus}`)
     applyTheme()
 }
 

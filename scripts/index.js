@@ -2,7 +2,6 @@ import mobileToggle from "./modules/mobileNav.js";
 import inputLabelHandler from "./modules/input.js";
 import buildNav from "./modules/nav.js";
 import { checkUserTheme, handleToggleDarkMode } from "./modules/darkMode.js";
-import { handleForm } from "./modules/form.js";
 
 // HTML VARIABLES
 
@@ -19,7 +18,7 @@ const contactFrom = document.getElementById("contactForm");
 
 // form 
 const contactForm = document.getElementById("contactForm");
-
+const contactResponse = document.querySelector(".contactResponse");
 //**** PAGE LOAD SET UP ****
 
 // dark/light mode theme
@@ -54,16 +53,34 @@ darkModeBtn.addEventListener("click", handleToggleDarkMode);
 document.addEventListener("click", inputLabelHandler);
 
 
-contactForm.addEventListener("submit", (e)=>{
+// NETLIFY FORM SUBMISSION
+contactForm.addEventListener("submit", async(e)=>{
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
 
-    fetch("/", {
+    const res = await fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
+
+    if (res.ok) {
+      contactResponse.setAttribute("aria-hidden", "false");
+      form.reset();
+    } else{
+      // create direct email link
+      const link = document.createElement("a")
+      link.href = "mailto:solivan_lau@outlook.com";
+      link.textContent = "solivan_lau@outlook.com.";
+      
+      // adjust response text
+      const paragraph = contactResponse.querySelector("p")
+      paragraph.textContent = "Something went wrong on our end! \n Please try sending your message directly to my email: \n" 
+      // append link as child
+      paragraph.appendChild(link);
+
+      // reveal response
+      contactResponse.setAttribute("aria-hidden", "false");
+    }
 })

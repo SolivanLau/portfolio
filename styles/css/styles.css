@@ -1436,7 +1436,7 @@ section.contact .navBtn {
   flex-grow: 1;
   border-radius: 8px;
   background-color: var(--bgColor);
-  padding: 0px 15px;
+  padding: 0px 15px 50px;
   display: flex;
   flex-direction: column;
 }
@@ -1482,6 +1482,19 @@ section.contact .navBtn {
   font-size: 0.75rem;
 }
 
+.verify-field {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .contactSubmit {
   margin: 20px 10px 40px;
   border-radius: 10px;
@@ -1499,6 +1512,27 @@ section.contact .navBtn {
 .contactSubmit:active {
   color: var(--formActive);
   border: 2px solid var(--formActive);
+}
+
+.contactResponse {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  transition: opacity 0.2s ease;
+  color: var(--primeTextColor);
+  line-height: 1.5;
+}
+.contactResponse p {
+  white-space: pre-line;
+}
+.contactResponse a {
+  text-decoration: underline;
+  color: var(--accentGreen);
+}
+
+.contactResponse[aria-hidden=true] {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media only screen and (max-width: 595px) {

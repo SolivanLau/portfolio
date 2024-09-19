@@ -98,7 +98,7 @@ section.contact {
     flex-grow: 1;
     border-radius: 8px;
     background-color: var(--bgColor);
-    padding: 0px 15px;
+    padding: 0px 15px 50px;
     display: flex;
     flex-direction: column;
 }
@@ -154,6 +154,12 @@ section.contact {
     font-size: .75rem;
 }
 
+
+// VERIFY FIELD
+.verify-field {
+    position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;
+}
+
 // SUBMIT BUTTON
 .contactSubmit {
     margin: 20px 10px 40px;
@@ -175,7 +181,26 @@ section.contact {
     }
 }
 
+.contactResponse {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    transition: opacity 0.2s ease;
+    color: var(--primeTextColor);
+    line-height: 1.5;
+    p{
+        white-space: pre-line;
+    }
+    a{
+        text-decoration: underline;
+        color: var(--accentGreen);
+    }
+}
 
+.contactResponse[aria-hidden="true"] {
+    opacity: 0;
+    visibility: hidden;
+}
 // MEDIA QUERIES
 // custom 595px
 @include responsiveStyle(595){

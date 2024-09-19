@@ -917,7 +917,7 @@
         </article>
 
         <!-- CONTACT FORM -->
-        <form name="contact" method="POST" data-netlify="true" id="contactForm" class="contactForm">
+        <form name="contact" method="POST"  id="contactForm" class="contactForm" data-netlify="true" netlify-honeypot="verify-field">
           <div class="userInfoContainer">
             <!-- NAME INPUT -->
             <!-- label container -->
@@ -947,6 +947,18 @@
             <label id="msgLabel" for="message" class="labelPlaceholder">Let's Talk!</label>
           </label>
           <button class="contactSubmit">Send!</button>
+
+
+          <!-- VERIFICATION FIELD -->
+           <div class="verify-field">
+             <label for="verify-field">
+               Ignore this field if you are human 
+             </label>
+             <input name="verify-field" type="checkbox" />
+           </div>
+          <div class="contactResponse" aria-hidden="true">
+              <p>Success! Thank you for your message I'll get in touch with you as soon as possible.</p>
+          </div>
         </form>
       </div>
 
