@@ -411,11 +411,6 @@ template {
   min-height: 100vh;
 }
 
-.highlightBrand {
-  color: var(--white);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4274509804);
-}
-
 .bold {
   font-weight: 700;
 }
@@ -619,6 +614,11 @@ p {
   font-size: 1.2rem;
 }
 
+@media only screen and (max-width: 400px) {
+  h2 {
+    text-align: center;
+  }
+}
 header .fixedWrapper {
   height: calc(100vh - 90px);
   display: flex;
@@ -943,8 +943,9 @@ header .fixedWrapper {
   font-size: 1.5rem;
   letter-spacing: 1.7;
 }
-.about a:hover {
-  text-decoration: underline var(--white) 2px;
+.about a {
+  color: var(--staticDarkBlue);
+  text-decoration: underline;
 }
 .about .wrapper {
   display: flex;
@@ -1060,7 +1061,7 @@ header .fixedWrapper {
 @media only screen and (max-width: 630px) {
   .techStack {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px 5px;
+    gap: 15px;
   }
   .techContainer svg {
     width: 40%;

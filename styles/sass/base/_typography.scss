@@ -39,3 +39,10 @@ p{
     font-size: 1.2rem;
 }
 
+
+@include responsiveStyle(mobile){
+    h2{
+        text-align: center;
+    }
+
+}
