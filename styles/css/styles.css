@@ -923,8 +923,11 @@ header .fixedWrapper {
   .brandText h1 {
     font-size: 2rem;
   }
-  .brandText .subText {
+  .brandText .subText, .brandText .subText + p {
     font-size: 1rem;
+  }
+  .brandText .cta {
+    gap: 16px;
   }
 }
 .about {

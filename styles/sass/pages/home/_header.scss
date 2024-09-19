@@ -395,8 +395,11 @@ header .fixedWrapper {
             font-size: 2rem;
         }
 
-        .subText {
+        .subText, .subText+p {
             font-size: 1rem;
+        }
+        .cta{
+            gap:16px
         }
     }
 }
