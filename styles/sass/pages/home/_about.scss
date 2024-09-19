@@ -98,7 +98,13 @@
 }
 
 @include responsiveStyle(mobile){
-    .about h2{
-        text-align: center;
+    .about {
+        h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 1rem;
+        }
     }
 }

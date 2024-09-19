@@ -66,6 +66,10 @@ contactForm.addEventListener("submit", async(e)=>{
     })
 
     if (res.ok) {
+      // adjust response text
+      const paragraph = contactResponse.querySelector("p")
+      paragraph.textContent = "Success - thanks for your message! \n I'll get in touch with you as soon as possible."
+      // reveal response + reset form
       contactResponse.setAttribute("aria-hidden", "false");
       form.reset();
     } else{
