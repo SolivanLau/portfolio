@@ -1,30 +1,26 @@
-
-
 // theme toggle btn
-const toggleIcon = document.getElementById('toggleIcon')
+const toggleIcon = document.getElementById("toggleIcon");
 
-const userThemePreference = window.matchMedia("(prefers-color-scheme: dark)")
-let darkModeStatus = '';
+const userThemePreference = window.matchMedia("(prefers-color-scheme: dark)");
+let darkModeStatus = "";
 
 // applies theme based on darkModeStatus boolean val
 const applyTheme = () => {
     const rootElement = document.body;
     if (darkModeStatus === true) {
-        rootElement.classList.add('themeDark');
-        rootElement.classList.remove('themeLight');
+        rootElement.classList.add("themeDark");
+        rootElement.classList.remove("themeLight");
 
-        toggleIcon.classList.add('dark');
-        toggleIcon.classList.remove('light');
+        toggleIcon.classList.add("dark");
+        toggleIcon.classList.remove("light");
     } else {
-        rootElement.classList.add('themeLight');
-        rootElement.classList.remove('themeDark');
+        rootElement.classList.add("themeLight");
+        rootElement.classList.remove("themeDark");
 
-        toggleIcon.classList.add('light');
-        toggleIcon.classList.remove('dark');
-
+        toggleIcon.classList.add("light");
+        toggleIcon.classList.remove("dark");
     }
-}
-
+};
 
 // checking preference on load
 export const checkUserTheme = () => {
@@ -33,11 +29,10 @@ export const checkUserTheme = () => {
     } else {
         darkModeStatus = false;
     }
-    applyTheme()
-}
+    applyTheme();
+};
 
 export const handleToggleDarkMode = () => {
     darkModeStatus = !darkModeStatus;
-    applyTheme()
-}
-
+    applyTheme();
+};

@@ -1,4 +1,4 @@
-@use '../../abstracts' as *;
+@use "../../abstracts" as *;
 
 // ABOUT SECTION
 .about {
@@ -9,16 +9,16 @@
         color: var(--darkBlue);
     }
 
-    p{
+    p {
         font-size: 1.5rem;
         letter-spacing: 1.7;
     }
 
-    .highlightBrand{
+    .highlightBrand {
         color: var(--white);
         text-shadow: 3px 3px 6px var(--overlay);
     }
-    a{
+    a {
         color: var(--staticDarkBlue);
     }
     .wrapper {
@@ -30,10 +30,7 @@
         row-gap: 20px;
         flex-wrap: wrap;
     }
-
 }
-
-
 
 // icon interactions
 .aboutIcon {
@@ -42,10 +39,9 @@
 
 .handWave {
     margin-left: 10px;
-    animation: rotate .5s infinite alternate ease-in-out;
+    animation: rotate 0.5s infinite alternate ease-in-out;
     animation-play-state: paused;
 }
-
 
 .aboutImg {
     width: 35%;
@@ -54,7 +50,6 @@
 
     img {
         border-radius: 10px;
-
     }
 }
 
@@ -80,16 +75,14 @@
     gap: 15px;
 }
 
-
 // MEDIA QUERIES
 
-@include responsiveStyle(795){
+@include responsiveStyle(795) {
     .aboutTextContainer {
         flex-direction: column;
         flex-wrap: nowrap;
         width: 100%;
     }
-
 
     .aboutMe {
         width: 100%;
@@ -101,13 +94,13 @@
     }
 }
 
-@include responsiveStyle(mobile){
+@include responsiveStyle(mobile) {
     .about {
-        h2{
+        h2 {
             text-align: center;
             margin-bottom: 20px;
         }
-        p{
+        p {
             font-size: 1.1rem;
         }
     }

@@ -1,4 +1,4 @@
-@use '../../abstracts' as *;
+@use "../../abstracts" as *;
 
 .techStack {
     display: grid;
@@ -11,61 +11,56 @@
     place-items: center;
     gap: 10px;
 
-    svg{
+    svg {
         width: 100px;
     }
 }
 
-.techName{
+.techName {
     margin-top: 10px;
     text-align: center;
 }
 
-
-// ICONS 
-.wordpress svg{
+// ICONS
+.wordpress svg {
     fill: var(--darkBlue);
 }
 
-.themeDark{
-    .wordpress svg{
+.themeDark {
+    .wordpress svg {
         fill: var(--white);
     }
 }
 // MEDIA QUERIES
 
-
-
-@include responsiveStyle(tablet){
-    .techStack{
+@include responsiveStyle(tablet) {
+    .techStack {
         grid-template-columns: repeat(4, 1fr);
-        gap: 25px 15px ;
+        gap: 25px 15px;
     }
-    .techContainer{
-        svg{
+    .techContainer {
+        svg {
             width: 60px;
         }
     }
 
-    .techName{
+    .techName {
         margin-top: 0px;
     }
 }
 
-@include responsiveStyle(630){
-    .techStack{
+@include responsiveStyle(630) {
+    .techStack {
         grid-template-columns: repeat(3, 1fr);
-        gap: 15px ;
-
+        gap: 15px;
     }
-    .techContainer{
-        svg{
+    .techContainer {
+        svg {
             width: 40%;
         }
     }
 
-    .techName{
+    .techName {
         font-size: var(--bodyFontSize);
     }
 }
-

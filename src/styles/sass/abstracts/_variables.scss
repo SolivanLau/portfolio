@@ -1,9 +1,9 @@
 // Variables
-:root{
+:root {
     /* Fonts */
-    --titleFont: 'Montserrat', sans-serif;
-    --baseFont: 'Hind', sans-serif;
-    
+    --titleFont: "Montserrat", sans-serif;
+    --baseFont: "Hind", sans-serif;
+
     /* Colors */
     --white: #e7e8e7;
     --accentGreen: #37b45d;
@@ -11,33 +11,33 @@
     --accentBlue: #8c99aa;
     --darkBlue: #373849;
     --overlay: #3d3d3d7b;
-    
+
     /* Font Sizes */
     --headingFontSize: 4.236rem;
     --subHeadingFontSize: 2.618rem;
     --lgBodyFontSz: 1.2rem;
-    --bodyFontSize: 1rem;  
+    --bodyFontSize: 1rem;
 
-/* Light Theme */
-  --bgColor: var(--white);
-  --bgColorDark: var(--accentBlue);
-  --primeTextColor: var(--darkBlue);
-  --secText: var(--darkBlue);
-  --formText: var(--darkBlue);
-  --formHover: var(--accentBlue);
-  --formActive: var(--brandGreen);
-  --darkLink: var(--accentBlue);
-  --pokeJack: rgb(198, 62, 78);
-  --stockMyFridgeWhite: rgba(239, 239, 239, 0.887);
-  --stockMyFridgeGreen: rgb(64, 141, 9);
-  --randomQuiz: var(--accentBlue);
-  --deliciousPink: rgb(64, 99, 12);
-  --staticWhite: var(--white);
-  --staticDarkBlue: var(--darkBlue);
-  --staticBrandGreen: var(--brandGreen);
-  --staticRed: rgb(255, 133, 127);
-  --staticYellow: rgb(253, 219, 81); 
-  --staticBlack: #3d3d3d;
+    /* Light Theme */
+    --bgColor: var(--white);
+    --bgColorDark: var(--accentBlue);
+    --primeTextColor: var(--darkBlue);
+    --secText: var(--darkBlue);
+    --formText: var(--darkBlue);
+    --formHover: var(--accentBlue);
+    --formActive: var(--brandGreen);
+    --darkLink: var(--accentBlue);
+    --pokeJack: rgb(198, 62, 78);
+    --stockMyFridgeWhite: rgba(239, 239, 239, 0.887);
+    --stockMyFridgeGreen: rgb(64, 141, 9);
+    --randomQuiz: var(--accentBlue);
+    --deliciousPink: rgb(64, 99, 12);
+    --staticWhite: var(--white);
+    --staticDarkBlue: var(--darkBlue);
+    --staticBrandGreen: var(--brandGreen);
+    --staticRed: rgb(255, 133, 127);
+    --staticYellow: rgb(253, 219, 81);
+    --staticBlack: #3d3d3d;
 }
 
 .themeDark {
@@ -51,9 +51,6 @@
     --formActive: var(--white);
     --darkLink: var(--accentGreen);
 }
-  
-
-  
 
 // ANIMATIONS
 @keyframes levitate {
@@ -153,7 +150,7 @@
     }
 
     87% {
-        rotate: .8deg;
+        rotate: 0.8deg;
     }
 
     92% {
@@ -161,12 +158,9 @@
     }
 
     100% {
-        rotate: .5deg;
+        rotate: 0.5deg;
     }
 }
-
-
-
 
 @keyframes rotate {
     from {
@@ -185,7 +179,6 @@
         translate: 0 -5px;
     }
 }
-
 
 @keyframes navLinkAnimate {
     100% {
@@ -215,7 +208,6 @@
 }
 
 @keyframes wiggle {
-
     0% {
         transform: rotate(0);
     }
@@ -241,12 +233,8 @@
     }
 }
 
-
 @keyframes torontoPopUp {
     100% {
         top: -30px;
     }
 }
-
-
-

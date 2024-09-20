@@ -1,11 +1,11 @@
 // nav system
 const sectionLinkHTML = (parentElement, href) => {
-  const linkElement = document.createElement("div");
+    const linkElement = document.createElement("div");
 
-  linkElement.classList.add("navBtn");
-  // linkElement.href = `#${href}`;
+    linkElement.classList.add("navBtn");
+    // linkElement.href = `#${href}`;
 
-  linkElement.innerHTML = `
+    linkElement.innerHTML = `
     <a href="#${href}" tabindex="0" aria-label="navigation link to ${href}">    
         <div class="arrowContainer">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48 48" width="48" height="48" class="navDown">
@@ -14,13 +14,13 @@ const sectionLinkHTML = (parentElement, href) => {
         </div>
     </a>
     `;
-  parentElement.appendChild(linkElement);
+    parentElement.appendChild(linkElement);
 };
 
 const sideNavHTML = (parentElement, href) => {
-  const navIcon = document.createElement("div");
-  navIcon.classList.add("navIcon");
-  navIcon.innerHTML = `
+    const navIcon = document.createElement("div");
+    navIcon.classList.add("navIcon");
+    navIcon.innerHTML = `
     <a href="#${href}">
         <div class="iconContainer">
             <svg viewBox="0 0 100 100" >
@@ -29,17 +29,17 @@ const sideNavHTML = (parentElement, href) => {
         </div>
     </a>
     `;
-  parentElement.appendChild(navIcon);
+    parentElement.appendChild(navIcon);
 };
 
 const buildNav = (sectionArr) => {
-  // adding link to next section UNLESS last
-  for (let i = 0; i < sectionArr.length - 1; i++) {
-    // opted to use for loop - iterates logic UNTIL last section
-    const nextSectionIndex = i + 1;
+    // adding link to next section UNLESS last
+    for (let i = 0; i < sectionArr.length - 1; i++) {
+        // opted to use for loop - iterates logic UNTIL last section
+        const nextSectionIndex = i + 1;
 
-    sectionLinkHTML(sectionArr[i], sectionArr[nextSectionIndex].id);
-  }
+        sectionLinkHTML(sectionArr[i], sectionArr[nextSectionIndex].id);
+    }
 };
 
 export default buildNav;

@@ -10,16 +10,27 @@ This is a portfolio built with HTML, CSS, JavaScript and SCSS, showcasing projec
 
 Naming conventions in HTML, CSS and JavaScript all use `camelCase`.
 
-This project uses dart sass to compiled from `/styles/sass/styles.scss` to `/styles/css/styles.css` with **no source map**.
+This project uses Vite as a build tool to:
 
-Open your cli and run the following script to have sass watch and compile edits live:
+-   launch a live development server on [localhost:5173](http://localhost:5173/)
+-   minify and optimize `html` `css` and `js` files during build.
+-   bundle from `src` directory to the `/dist` folder for production.
+
+To get started, open your cli of choice and run the following script to install the project
 
 ```shell
-# watch and compile sass during dev process
-npm run sass
+# install project dependencies
+pnpm install
 ```
 
-Feel free to take a look at the script in `package.json` file for more details.
+To start the development server on [localhost:5173](http://localhost:5173/), run the `dev` command :
+
+```shell
+# watch and compile at localhost:5173
+pnpm dev
+```
+
+`scss` files are included in Hot Module Replacement (HMR) with Vite. Feel free to take a look at the script in `package.json` file for more details.
 
 ## SCSS Structure
 
@@ -27,10 +38,10 @@ SCSS organization is loosely adapting Kitty Giraudel's SCSS architecture from [S
 
 As a general overview:
 
--  `sass/abstracts` contains normalize, variables and utilities (mixins and global classes).
--  `sass/base` contains global styles.
--  `sass/pages` contains sub-folders dedicated to each page, home and email, each having partials for each major section of the page.
--  media queries are coded within their respective partial - section by section using the responsive style mix-in.
+-   `sass/abstracts` contains normalize, variables and utilities (mixins and global classes).
+-   `sass/base` contains global styles.
+-   `sass/pages` contains sub-folders dedicated to each page, home and email, each having partials for each major section of the page.
+-   media queries are coded within their respective partial - section by section using the responsive style mix-in.
 
 Each partial folder has an `index.scss` file forwarding all partials to be used in the main `styles.scss`.
 
