@@ -1396,7 +1396,7 @@
                         <div class="userInfoContainer">
                             <!-- NAME INPUT -->
                             <!-- label container -->
-                            <label id="nameContainer" for="name" class="inputContainer">
+                            <label id="nameContainer" for="nameInput" class="inputContainer">
                                 <!-- input -->
                                 <input
                                     type="text"
@@ -1404,16 +1404,17 @@
                                     id="nameInput"
                                     class="inputChild"
                                     required
+                                    autocomplete="on"
                                 />
                                 <!-- label text -->
-                                <label id="nameLabel" for="name" class="labelPlaceholder"
+                                <label id="nameLabel" for="nameInput" class="labelPlaceholder"
                                     >Name</label
                                 >
                             </label>
 
                             <!-- EMAIL INPUT -->
                             <!-- label container -->
-                            <label id="emailContainer" for="email" class="inputContainer">
+                            <label id="emailContainer" for="emailInput" class="inputContainer">
                                 <!-- input -->
                                 <input
                                     type="email"
@@ -1421,17 +1422,18 @@
                                     id="emailInput"
                                     class="inputChild"
                                     required
+                                    autocomplete="on"
                                 />
                                 <!-- label text -->
-                                <label id="emailLabel" for="email" class="labelPlaceholder"
-                                    >Email</label
-                                >
+                                <label id="emailLabel" for="emailInput" class="labelPlaceholder">
+                                    Email
+                                </label>
                             </label>
                         </div>
 
                         <!-- MSG INPUT -->
                         <!-- label container -->
-                        <label id="msgContainer" for="message" class="inputContainer msg">
+                        <label id="msgContainer" for="msgInput" class="inputContainer msg">
                             <!-- input -->
                             <textarea
                                 name="message"
@@ -1440,9 +1442,9 @@
                                 required
                             ></textarea>
                             <!-- label text -->
-                            <label id="msgLabel" for="message" class="labelPlaceholder"
-                                >Let's Talk!</label
-                            >
+                            <label id="msgLabel" for="msgInput" class="labelPlaceholder">
+                                Let's Talk!
+                            </label>
                         </label>
                         <button class="contactSubmit">Send!</button>
 
