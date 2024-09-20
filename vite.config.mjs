@@ -9,6 +9,7 @@ export default defineConfig({
         },
     },
     root: "./src",
+    publicDir: "../public",
     assetsInclude: ["**/*.woff", "**/*.woff2"],
     build: {
         outDir: "../dist",
