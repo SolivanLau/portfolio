@@ -12,6 +12,7 @@ export default defineConfig({
     assetsInclude: ["**/*.woff", "**/*.woff2"],
     build: {
         outDir: "../dist",
+        emptyOutDir: true,
         rollupOptions: {
             input: {
                 home: resolve(__dirname, "src/index.html"),
