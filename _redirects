@@ -1,5 +1,0 @@
-# Netlify Redirects
-
-# email pages
-/email /index.html#projects 200
-

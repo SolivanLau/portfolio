@@ -69,16 +69,3 @@
     }
 }
 
-@include responsiveStyle(529){
-    .techStack{
-        // justify-content: space-between;
-        // gap: 35px 0;
-    }
-    .techContainer{
-        // width:28%;
-        svg{
-            // width: 55px;
-        }
-    }
-
-}
