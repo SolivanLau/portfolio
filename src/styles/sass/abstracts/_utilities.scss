@@ -1,21 +1,4 @@
-// Media Query Mixin
-@mixin responsiveStyle($breakpoint) {
-    @if $breakpoint == tablet {
-        @media only screen and (max-width: 795px) {
-            @content;
-        }
-    } @else if $breakpoint == mobile {
-        @media only screen and (max-width: 400px) {
-            @content;
-        }
-    } @else {
-        $custom-width: $breakpoint + px;
-        @media only screen and (max-width: $custom-width) {
-            @content;
-        }
-    }
-}
-
+@use "./mixins" as *;
 // global wrapper
 .wrapper {
     max-width: 1440px;

@@ -1,8 +1,15 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import { createHtmlPlugin } from "vite-plugin-html";
+
 export default defineConfig({
+    resolve: {
+        alias: {
+            "@": resolve(__dirname, "./src"),
+        },
+    },
     root: "./src",
+    assetsInclude: ["**/*.woff", "**/*.woff2"],
     build: {
         outDir: "../dist",
         rollupOptions: {
